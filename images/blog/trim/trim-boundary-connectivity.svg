@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" role="img" aria-labelledby="title desc">
+<title id="title">Crossing wire before and after trimDesign</title><desc id="desc">In the original design a wire crosses the selected boundary and connects to an inside cell, while a separate net is wholly outside. The trimmed view shows the retained cell and wire inside the box, a new boundary port, and no wholly outside net.</desc>
+<rect width="600" height="350" rx="18" fill="#eef7ff"/>
+<text x="24" y="37" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#10345d">Connectivity across a trim boundary</text>
+<rect x="22" y="56" width="255" height="252" rx="12" fill="#f9fcff" stroke="#91a9c0" stroke-width="2"/>
+<text x="36" y="84" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#173c62">Original design</text>
+<rect x="90" y="106" width="155" height="160" rx="7" fill="#e9f9f0" stroke="#159a62" stroke-width="3" stroke-dasharray="9 6"/>
+<text x="98" y="130" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#08744c">Trim box</text>
+<rect x="169" y="158" width="64" height="46" rx="7" fill="#8eddbb" stroke="#258c66" stroke-width="2"/>
+<text x="173" y="186" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#165e47">Cell</text>
+<path d="M45 181h124" fill="none" stroke="#d48613" stroke-width="6"/>
+<text x="38" y="157" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#94600f">Crossing wire</text>
+<path d="M45 241h30" fill="none" stroke="#cf6772" stroke-width="5" stroke-dasharray="7 5"/>
+<circle cx="45" cy="241" r="5" fill="#cf6772"/><circle cx="75" cy="241" r="5" fill="#cf6772"/>
+<text x="36" y="287" font-family="Arial,sans-serif" font-size="15" fill="#a04350">Outside-only net</text>
+<rect x="323" y="56" width="255" height="252" rx="12" fill="#f9fcff" stroke="#91a9c0" stroke-width="2"/>
+<text x="337" y="84" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#173c62">Trimmed design</text>
+<rect x="351" y="106" width="191" height="160" rx="7" fill="#e9f9f0" stroke="#159a62" stroke-width="3" stroke-dasharray="9 6"/>
+<text x="361" y="130" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#08744c">Same trim box</text>
+<rect x="440" y="158" width="67" height="46" rx="7" fill="#8eddbb" stroke="#258c66" stroke-width="2"/>
+<text x="445" y="186" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#165e47">Cell</text>
+<path d="M351 181h89" fill="none" stroke="#d48613" stroke-width="6"/>
+<circle cx="351" cy="181" r="10" fill="#fff1cf" stroke="#b86d0c" stroke-width="3"/>
+<text x="364" y="231" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#94600f">New boundary port</text>
+<path d="M361 216 352 193" fill="none" stroke="#b86d0c" stroke-width="2"/>
+<text x="31" y="333" font-family="Arial,sans-serif" font-size="16" fill="#a04350">Outside-only net omitted</text>
+<text x="328" y="333" font-family="Arial,sans-serif" font-size="16" fill="#08744c">Inside wire and cell retained</text>
+</svg>

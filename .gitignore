@@ -1,0 +1,13 @@
+# Local backups, previous site exports, and generated audit material
+*.zip
+*.txt
+*.legacy-export.*
+/v1/
+/_next/
+/assests/
+/screenshots/
+/.problem*
+/.qa*
+/*.csv
+/*.md
+!/README.md

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Understanding FinFET Technology in VLSI | Abhyasa VLSI</title>
+  <meta name="description" content="Learn how FinFET transistor structure, advantages, and tradeoffs support modern semiconductor design.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="/inner-pages-reference.css">
+  <link rel="stylesheet" href="/projects-dropdown.css">
+  <link rel="stylesheet" href="/blog-finfet.css">
+</head>
+<body class="inner-page finfet-page">
+  <a class="skip-link" href="#main">Skip to article</a>
+  <header class="inner-header">
+    <div class="inner-container inner-nav-wrap">
+      <a class="inner-brand" href="/" aria-label="Abhyasa VLSI home">
+        <img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48">
+        <span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span>
+      </a>
+      <input class="nav-switch" type="checkbox" id="site-menu" aria-label="Toggle navigation">
+      <label class="menu-button" for="site-menu"><span class="menu-icon" aria-hidden="true"></span><span class="sr-only">Menu</span></label>
+      <nav class="inner-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/#courses">Courses</a><a href="/about.html">About Us</a>
+        <a href="/projects/physical-design.html">Projects</a><a href="/placements.html">Placements</a>
+        <a href="/#blogs" aria-current="page">Blogs</a><a href="/contact.html">Contact Us</a>
+        <a class="button button-primary nav-cta" href="/contact.html">Enquire Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="inner-container finfet-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">›</span><a href="/#blogs">Blog</a><span aria-hidden="true">›</span><span aria-current="page">Understanding FinFET Technology in VLSI</span>
+    </nav>
+
+    <article>
+      <header class="finfet-heading">
+        <h1><span>Understanding</span> FinFET Technology in VLSI</h1>
+        <p class="finfet-lede">Learn how FinFET transistors are revolutionizing VLSI design, enabling smaller, faster, and more efficient chips.</p>
+        <ul class="finfet-meta" aria-label="Article details">
+          <li>VLSI Technology</li><li>Prof. L. Gupta</li><li>7 min read</li>
+        </ul>
+        <ul class="finfet-tags" aria-label="Article tags"><li>VLSI</li><li>FinFET</li><li>Semiconductor</li></ul>
+      </header>
+
+      <div class="finfet-visual" data-asset-id="finfet-structure-3d">
+        <picture class="finfet-artwork">
+          <source media="(max-width: 600px)" srcset="/images/blog/blog-finfet-structure-3d-mobile.svg?v=20261015-fin-yellow4" type="image/svg+xml">
+          <img src="/images/blog/blog-finfet-structure-3d.svg?v=20261015-fin-yellow4" width="1560" height="876" alt="Conceptual tri-gate FinFET: source and drain at opposite ends of a raised silicon fin, with a central gate wrapping the fin’s top and sidewalls above a silicon substrate">
+        </picture>
+      </div>
+
+      <section class="finfet-section about-finfet" aria-labelledby="what-finfet">
+        <div class="finfet-section-heading"><h2 id="what-finfet">What is FinFET?</h2><span aria-hidden="true"></span></div>
+        <div class="finfet-prose">
+          <p>As technology demands more efficient, high-performance devices, the limitations of traditional planar transistors have led to a pivotal innovation: FinFET (Fin Field-Effect Transistor) technology. FinFETs mark a major shift in Very-Large-Scale Integration (VLSI) design, introducing a three-dimensional structure that allows for better control over electrical current, especially at the small geometries required in modern electronics. In this blog post, we’ll break down what makes FinFETs unique and why they’re crucial for advancing VLSI.</p>
+          <p>Unlike conventional MOSFETs, which are limited to a flat, two-dimensional plane, FinFETs utilize a fin-shaped, vertical channel that improves gate control. This design effectively reduces issues like leakage current and short-channel effects, which are common at the sub-20nm scale. With FinFETs, devices achieve faster speeds, lower power consumption, and greater scalability, making this technology ideal for power-sensitive applications such as smartphones, wearables, and high-performance computing.</p>
+        </div>
+      </section>
+
+      <section class="finfet-section advantages-section" aria-labelledby="advantages-title">
+        <div class="finfet-section-heading"><h2 id="advantages-title">Key Advantages</h2><span aria-hidden="true"></span></div>
+        <div class="advantages-grid">
+          <div class="advantage-card advantage-control"><span class="advantage-icon" data-asset-id="finfet-advantage-control" aria-hidden="true"><img src="/images/blog/blog-finfet-icon-control.svg?v=20261015-icons2" width="26" height="26" alt="" loading="lazy"></span><div><h3>Better Control</h3><p>Allows better control over electrical current.</p></div></div>
+          <div class="advantage-card advantage-leakage"><span class="advantage-icon" data-asset-id="finfet-advantage-leakage" aria-hidden="true"><img src="/images/blog/blog-finfet-icon-leakage.svg?v=20261015-icons2" width="26" height="26" alt="" loading="lazy"></span><div><h3>Lower Leakage</h3><p>Reduces leakage current and short-channel effects.</p></div></div>
+          <div class="advantage-card advantage-speed"><span class="advantage-icon" data-asset-id="finfet-advantage-speed" aria-hidden="true"><img src="/images/blog/blog-finfet-icon-performance.svg?v=20261015-icons2" width="26" height="26" alt="" loading="lazy"></span><div><h3>Higher Performance</h3><p>Devices achieve faster speeds with lower power consumption.</p></div></div>
+          <div class="advantage-card advantage-scale"><span class="advantage-icon" data-asset-id="finfet-advantage-scalability" aria-hidden="true"><img src="/images/blog/blog-finfet-icon-scalability.svg?v=20261015-icons2" width="26" height="26" alt="" loading="lazy"></span><div><h3>Scalability</h3><p>Offers greater scalability for small geometries.</p></div></div>
+        </div>
+      </section>
+
+      <section class="finfet-section comparison-section" aria-labelledby="comparison-title">
+        <div class="finfet-section-heading"><h2 id="comparison-title">FinFET vs Planar Transistor</h2><span aria-hidden="true"></span></div>
+        <div class="comparison-scroll" role="region" aria-label="FinFET and planar transistor comparison table. Scroll horizontally on narrow screens." tabindex="0">
+          <table class="finfet-comparison">
+            <thead><tr><th scope="col">Feature</th><th scope="col">Planar Transistor</th><th scope="col">FinFET</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Structure</th><td>Flat, two-dimensional plane</td><td>Three-dimensional, fin-shaped vertical channel</td></tr>
+              <tr><th scope="row">Gate control</th><td>Limited by the planar structure</td><td>Improved control over electrical current</td></tr>
+              <tr><th scope="row">Leakage and short-channel effects</th><td>Common issues at small geometries</td><td>Design reduces these issues</td></tr>
+              <tr><th scope="row">Speed and power</th><td>Limitations in meeting efficiency and performance demands</td><td>Faster speeds and lower power consumption</td></tr>
+              <tr><th scope="row">Scalability</th><td>Planar limitations at smaller geometries</td><td>Greater scalability</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="finfet-section conclusion-section" aria-labelledby="conclusion-title">
+        <div class="finfet-section-heading"><h2 id="conclusion-title">Conclusion</h2><span aria-hidden="true"></span></div>
+        <div class="finfet-prose">
+          <p>We’ll also explore the challenges associated with FinFET implementation in VLSI, including design complexity, manufacturing considerations, and the specialized techniques engineers use to maximize FinFET efficiency. Finally, we’ll look at how FinFET technology has opened doors to more advanced transistor designs, driving innovation in IoT, AI, and other rapidly evolving fields.</p>
+          <p>This post is ideal for anyone interested in understanding the latest advancements in VLSI and how FinFET technology is shaping the future of semiconductor design. Whether you’re an industry professional or a student, this blog offers a clear, in-depth look at the transformative impact of FinFET technology on modern electronics.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="inner-footer">
+    <div class="inner-container footer-grid">
+      <div class="footer-brand"><a class="inner-brand footer-logo" href="/" aria-label="Abhyasa VLSI home"><img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48"><span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span></a><p>Mastering VLSI Design for a Smarter Tomorrow</p></div>
+      <div><h2>Quick Links</h2><ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/#courses">Courses</a></li><li><a href="/projects/physical-design.html">Projects</a></li></ul></div>
+      <div><h2>Contact Us</h2><ul><li><a href="tel:+919438062982">+91 9438062982</a></li><li><a href="mailto:abhyasasemitech@gmail.com">abhyasasemitech@gmail.com</a></li><li><a href="https://maps.app.goo.gl/x6nM2T9mB74tkHcb8" target="_blank" rel="noopener noreferrer">2nd Floor, Akhila Arcade, Rama Talkies Road, Asilmetta Junction, Visakhapatnam 530016, Andhra Pradesh, India</a></li></ul></div>
+      <div><h2>Resources &amp; Follow Us</h2><ul><li><a href="/#blogs">Blog</a></li><li><a href="/placements.html">Placements</a></li><li><a href="/contact.html">Contact Us</a></li><li><a href="https://www.linkedin.com/in/abhyasasemitech24/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://www.youtube.com/@abhyasa_semitech" target="_blank" rel="noopener noreferrer">YouTube</a></li><li><a href="https://www.instagram.com/abhyasa_semitech/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://x.com/abhyasasemitech" target="_blank" rel="noopener noreferrer">X</a></li></ul></div>
+    </div>
+    <div class="inner-container footer-legal"><p>Copyright © 2025 ABHYASA SEMICON TECHNOLOGIES. All rights reserved. Developed by <a href="https://github.com/venkateshpandrinki" target="_blank" rel="noopener noreferrer">Venkatesh</a></p></div>
+  </footer>
+  <script src="/projects-dropdown.js" defer></script>
+</body>
+</html>

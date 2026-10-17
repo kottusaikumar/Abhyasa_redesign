@@ -1,0 +1,335 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VLSI Physical Design Projects – Learn STA, PnR &amp; Layout with Cadence Tools</title><meta name="description" content="Gain practical experience with physical design projects covering clock tree synthesis, place &amp; route, STA, and signoff using industry-standard EDA tools. Built for hands-on VLSI training across South India."><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="/inner-pages-reference.css"><link rel="stylesheet" href="/projects-dropdown.css"><link rel="stylesheet" href="/project-page.css"></head><body class="inner-page project-page physical-projects"><a class="skip-link" href="#main">Skip to content</a><header class="inner-header"><div class="inner-container inner-nav-wrap"><a class="inner-brand" href="/" aria-label="Abhyasa home"><img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48"><span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span></a><input class="nav-switch" type="checkbox" id="inner-nav-toggle"><label class="menu-button" for="inner-nav-toggle"><span class="menu-icon" aria-hidden="true"></span><span class="sr-only">Toggle navigation</span></label><nav class="inner-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/#courses">Courses</a><a href="/about.html">About Us</a><a aria-current="page" href="/projects/physical-design.html">Projects</a><a href="/placements.html">Placements</a><a href="/#blogs">Blogs</a><a href="/contact.html">Contact Us</a><a class="button button-primary nav-cta" href="/#enrollment">Enroll Now</a></nav></div></header><main id="main"><section class="project-hero"><div class="inner-container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/projects/physical-design.html">Projects</a><span aria-hidden="true">›</span><span aria-current="page" id="category-crumb">Physical Design Projects</span></nav><div class="project-hero-grid"><div><h1><span>Physical Design</span> Projects</h1><p>Work on industry-relevant VLSI Physical Design projects and apply the concepts you learn in the course. These projects help build practical skills and confidence for real-world design flows.</p></div></div></div></section><section class="inner-container"><div class="project-flow"><h2 id="flow-title">Typical Physical Design Flow</h2><ol class="flow-steps"><li class="flow-step"><span class="flow-icon-placeholder" data-asset-id="project-pd-floorplanning-icon" aria-hidden="true"><img src="/images/projects/physical-flow-floorplanning.svg" width="34" height="34" alt="" aria-hidden="true"></span><strong id="flow-1">Floorplanning</strong><small id="flow-1d">Define area, I/O and power strategy</small></li><li class="flow-step"><span class="flow-icon-placeholder" data-asset-id="project-pd-placement-icon" aria-hidden="true"><img src="/images/projects/physical-flow-placement.svg" width="34" height="34" alt="" aria-hidden="true"></span><strong id="flow-2">Placement</strong><small id="flow-2d">Place cells and optimize timing</small></li><li class="flow-step"><span class="flow-icon-placeholder" data-asset-id="project-pd-routing-icon" aria-hidden="true"><img src="/images/projects/physical-flow-routing.svg" width="34" height="34" alt="" aria-hidden="true"></span><strong id="flow-3">Routing</strong><small id="flow-3d">Route nets and fix violations</small></li><li class="flow-step"><span class="flow-icon-placeholder" data-asset-id="project-pd-signoff-icon" aria-hidden="true"><img src="/images/projects/physical-flow-signoff.svg" width="34" height="34" alt="" aria-hidden="true"></span><strong id="flow-4">Signoff</strong><small id="flow-4d">DRC, LVS and timing closure</small></li></ol></div><!-- BEGIN GENERATED PROJECT CONTENT -->
+<section class="project-directory" id="pd-projects" tabindex="-1" aria-labelledby="pd-projects-title">
+  <div class="project-section-heading">
+    <div>
+      <p class="project-section-eyebrow">Explore projects</p>
+      <h2 id="pd-projects-title">Physical Design Projects</h2>
+    </div>
+    <span class="project-count">17 projects</span>
+  </div>
+  <p class="project-directory-intro">Choose a topic to jump to its full description, or scroll through every project below.</p>
+  <nav aria-label="Physical Design project directory">
+    <ol class="project-overview-list">
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-01">
+            <span class="project-overview-number" aria-hidden="true">01</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Dynamic Power Reduction Techniques through Clock Tree Optimization</strong>
+              <span class="project-overview-excerpt">This project involves optimizing the clock tree to minimize dynamic power consumption.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-02">
+            <span class="project-overview-number" aria-hidden="true">02</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Shielding Techniques to Enhance Signal Integrity in Routing</strong>
+              <span class="project-overview-excerpt">This project involves using shielding techniques to prevent signal interference, especially in high-frequency paths.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-03">
+            <span class="project-overview-number" aria-hidden="true">03</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Critical Path Analysis and Timing Optimization</strong>
+              <span class="project-overview-excerpt">This project involves analyzing critical paths and applying optimization techniques to reduce delay and meet timing requirements.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-04">
+            <span class="project-overview-number" aria-hidden="true">04</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Design for Manufacturability and Yield Enhancement Techniques</strong>
+              <span class="project-overview-excerpt">This project addresses layout modifications to enhance manufacturability and yield.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-05">
+            <span class="project-overview-number" aria-hidden="true">05</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Implementation of Decoupling Capacitance for Power Integrity</strong>
+              <span class="project-overview-excerpt">This project focuses on the design and placement of decoupling capacitors to improve power supply integrity across the layout.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-06">
+            <span class="project-overview-number" aria-hidden="true">06</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Skew Reduction Techniques for Clock Distribution Networks</strong>
+              <span class="project-overview-excerpt">Students will explore techniques to minimize clock skew across the design, ensuring synchronized operation of sequential elements.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-07">
+            <span class="project-overview-number" aria-hidden="true">07</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Timing Optimization in Physical Design By Cutting the Capacitance</strong>
+              <span class="project-overview-excerpt">In this project, students will focus on achieving timing convergence by strategically inserting buffers along critical paths.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-08">
+            <span class="project-overview-number" aria-hidden="true">08</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Physical Design for Area Minimization without Timing Violation</strong>
+              <span class="project-overview-excerpt">This project emphasizes layout compaction techniques to minimize silicon area while maintaining timing integrity.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-09">
+            <span class="project-overview-number" aria-hidden="true">09</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Routing Optimization for Efficient Congestion Management</strong>
+              <span class="project-overview-excerpt">This project focuses on routing strategies to manage congestion effectively, especially in high-density areas.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-10">
+            <span class="project-overview-number" aria-hidden="true">10</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Clock Gating Implementation for Dynamic Power Reduction</strong>
+              <span class="project-overview-excerpt">This project involves implementing clock gating to reduce dynamic power consumption.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-11">
+            <span class="project-overview-number" aria-hidden="true">11</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Floorplanning and Partitioning for Optimized Data Flow and Routing</strong>
+              <span class="project-overview-excerpt">Students will explore floorplanning techniques, focusing on data flow and routing efficiency.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-12">
+            <span class="project-overview-number" aria-hidden="true">12</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">High-Speed Signal Routing for Reduced Delay and Cross-Talk using Layer Promotion and NDR</strong>
+              <span class="project-overview-excerpt">Focusing on high-speed signal routing, students will implement techniques to minimize delay and cross-talk interference.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-13">
+            <span class="project-overview-number" aria-hidden="true">13</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Advanced Placement Optimization for Improved Timing Convergence</strong>
+              <span class="project-overview-excerpt">This project explores placement optimization techniques aimed at enhancing timing convergence.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-14">
+            <span class="project-overview-number" aria-hidden="true">14</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Insertion and Optimization of ECOs (Engineering Change Orders)</strong>
+              <span class="project-overview-excerpt">Focusing on ECO techniques, students will implement design changes and optimizations to achieve timing closure post-layout.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-15">
+            <span class="project-overview-number" aria-hidden="true">15</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">High-Speed I/O Buffer Placement and Optimization</strong>
+              <span class="project-overview-excerpt">This project focuses on optimizing I/O buffer placement for high-speed applications.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-16">
+            <span class="project-overview-number" aria-hidden="true">16</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">Multi-Vt Cell Selection for Power and Performance Trade-Off</strong>
+              <span class="project-overview-excerpt">Implement a multi-Vt cell selection strategy to balance power and performance.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+        <li class="project-overview-item">
+          <a class="project-overview-link" href="#pd-project-17">
+            <span class="project-overview-number" aria-hidden="true">17</span>
+            <span class="project-overview-copy">
+              <strong class="project-overview-title">RC Delay Minimization for Critical Paths</strong>
+              <span class="project-overview-excerpt">Identify critical paths and optimize RC delays through wire sizing, buffer insertion, and placement adjustments.</span>
+            </span>
+            <span class="project-overview-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+    </ol>
+  </nav>
+</section>
+<section class="project-details" aria-labelledby="pd-details-title">
+  <div class="project-details-intro">
+    <p class="project-section-eyebrow">The work behind each topic</p>
+    <h2 id="pd-details-title">Project Details</h2>
+    <p>Explore the complete descriptions for all 17 Physical Design projects.</p>
+  </div>
+      <article class="project-detail-section" id="pd-project-01" tabindex="-1" aria-labelledby="pd-project-01-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">01</span>
+          <h3 id="pd-project-01-title">Dynamic Power Reduction Techniques through Clock Tree Optimization</h3>
+        </div>
+        <p class="project-detail-description">This project involves optimizing the clock tree to minimize dynamic power consumption. Students will adjust the clock tree structure, reduce unnecessary toggling, and implement selective gating techniques. Through this, they gain skills in power-efficient design practices and understand the importance of an optimized clock network for achieving low-power goals.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-02" tabindex="-1" aria-labelledby="pd-project-02-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">02</span>
+          <h3 id="pd-project-02-title">Shielding Techniques to Enhance Signal Integrity in Routing</h3>
+        </div>
+        <p class="project-detail-description">This project involves using shielding techniques to prevent signal interference, especially in high-frequency paths. Students will implement ground shielding, adjust spacing, and use dedicated routes to reduce cross-talk. By maintaining signal integrity through effective shielding, students ensure reliable performance in designs with densely packed high-speed interconnects.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-03" tabindex="-1" aria-labelledby="pd-project-03-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">03</span>
+          <h3 id="pd-project-03-title">Critical Path Analysis and Timing Optimization</h3>
+        </div>
+        <p class="project-detail-description">This project involves analyzing critical paths and applying optimization techniques to reduce delay and meet timing requirements. Students will perform static timing analysis, identify high-delay paths, and adjust placement and routing to optimize timing. Through this, they learn to target timing-sensitive paths and achieve timing closure, preparing them to handle performance-critical designs.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-04" tabindex="-1" aria-labelledby="pd-project-04-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">04</span>
+          <h3 id="pd-project-04-title">Design for Manufacturability and Yield Enhancement Techniques</h3>
+        </div>
+        <p class="project-detail-description">This project addresses layout modifications to enhance manufacturability and yield. Students will explore DRC compliance, dummy fill insertion, and layout uniformity to improve robustness against fabrication variations. By focusing on yield optimization, they learn techniques to minimize defects and improve production success rates, which is vital for manufacturing scalability.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-05" tabindex="-1" aria-labelledby="pd-project-05-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">05</span>
+          <h3 id="pd-project-05-title">Implementation of Decoupling Capacitance for Power Integrity</h3>
+        </div>
+        <p class="project-detail-description">This project focuses on the design and placement of decoupling capacitors to improve power supply integrity across the layout. Students will analyze power grid behavior under varying loads and add capacitors to stabilize the voltage supply. Decoupling capacitors reduce noise and enhance circuit stability, providing a practical understanding of power integrity management.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-06" tabindex="-1" aria-labelledby="pd-project-06-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">06</span>
+          <h3 id="pd-project-06-title">Skew Reduction Techniques for Clock Distribution Networks</h3>
+        </div>
+        <p class="project-detail-description">Students will explore techniques to minimize clock skew across the design, ensuring synchronized operation of sequential elements. The project involves optimizing clock buffers, adjusting delays, and balancing clock paths. By achieving reduced skew, students ensure that timing margins are maintained, a critical requirement for clock-intensive designs.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-07" tabindex="-1" aria-labelledby="pd-project-07-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">07</span>
+          <h3 id="pd-project-07-title">Timing Optimization in Physical Design By Cutting the Capacitance</h3>
+        </div>
+        <p class="project-detail-description">In this project, students will focus on achieving timing convergence by strategically inserting buffers along critical paths. Buffer insertion reduces delay by breaking long interconnects, enhancing timing performance. This project teaches students the impact of buffers on timing closure and how effective buffer placement can stabilize timing in physical design.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-08" tabindex="-1" aria-labelledby="pd-project-08-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">08</span>
+          <h3 id="pd-project-08-title">Physical Design for Area Minimization without Timing Violation</h3>
+        </div>
+        <p class="project-detail-description">This project emphasizes layout compaction techniques to minimize silicon area while maintaining timing integrity. Students will explore cell placement, wire length reduction, and buffer optimization to create a compact design. By balancing area efficiency and timing requirements, students learn to optimize layouts effectively without sacrificing performance, which is vital in cost-sensitive designs.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-09" tabindex="-1" aria-labelledby="pd-project-09-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">09</span>
+          <h3 id="pd-project-09-title">Routing Optimization for Efficient Congestion Management</h3>
+        </div>
+        <p class="project-detail-description">This project focuses on routing strategies to manage congestion effectively, especially in high-density areas. Students will explore techniques such as track allocation, layer usage, and buffer insertion to reduce congestion without impacting timing. By managing congestion, they enhance signal flow and reduce design iterations, helping achieve a well-balanced layout and improving design convergence.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-10" tabindex="-1" aria-labelledby="pd-project-10-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">10</span>
+          <h3 id="pd-project-10-title">Clock Gating Implementation for Dynamic Power Reduction</h3>
+        </div>
+        <p class="project-detail-description">This project involves implementing clock gating to reduce dynamic power consumption. Students will design and optimize clock gating cells, learning to selectively disable inactive regions of the circuit. By reducing unnecessary clock toggling, they achieve significant power savings, which is especially useful for energy-efficient designs. The project provides experience in power optimization and effective power management at the physical design level.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-11" tabindex="-1" aria-labelledby="pd-project-11-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">11</span>
+          <h3 id="pd-project-11-title">Floorplanning and Partitioning for Optimized Data Flow and Routing</h3>
+        </div>
+        <p class="project-detail-description">Students will explore floorplanning techniques, focusing on data flow and routing efficiency. By partitioning the design into functional blocks and planning data paths effectively, they will achieve optimized routing and reduced congestion. This project helps students understand how early design decisions in floorplanning influence layout quality and improve the chances of meeting timing, power, and area constraints in the later stages.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-12" tabindex="-1" aria-labelledby="pd-project-12-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">12</span>
+          <h3 id="pd-project-12-title">High-Speed Signal Routing for Reduced Delay and Cross-Talk using Layer Promotion and NDR</h3>
+        </div>
+        <p class="project-detail-description">Focusing on high-speed signal routing, students will implement techniques to minimize delay and cross-talk interference. The project involves optimizing routing paths, controlling impedance, and ensuring signal integrity across critical high-speed paths. Through practical routing optimization, students gain insights into managing signal timing and integrity, essential for designs requiring high-speed data transfer with minimal interference.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-13" tabindex="-1" aria-labelledby="pd-project-13-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">13</span>
+          <h3 id="pd-project-13-title">Advanced Placement Optimization for Improved Timing Convergence</h3>
+        </div>
+        <p class="project-detail-description">This project explores placement optimization techniques aimed at enhancing timing convergence. Students will analyze placement algorithms, adjust cell locations, and optimize layout for timing-critical paths. The project focuses on reducing wire lengths, balancing cell density, and achieving efficient distribution of cells. Through these techniques, students will gain hands-on experience with improving timing closure, achieving reduced delays, and ensuring an optimized cell placement to meet timing constraints while enhancing overall design performance.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-14" tabindex="-1" aria-labelledby="pd-project-14-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">14</span>
+          <h3 id="pd-project-14-title">Insertion and Optimization of ECOs (Engineering Change Orders)</h3>
+        </div>
+        <p class="project-detail-description">Focusing on ECO techniques, students will implement design changes and optimizations to achieve timing closure post-layout. This project covers efficient ECO insertion methods for timing adjustments, layout modifications, and design rule adherence, equipping students with practical skills for handling last-minute design changes without extensive redesign.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-15" tabindex="-1" aria-labelledby="pd-project-15-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">15</span>
+          <h3 id="pd-project-15-title">High-Speed I/O Buffer Placement and Optimization</h3>
+        </div>
+        <p class="project-detail-description">This project focuses on optimizing I/O buffer placement for high-speed applications. Students will apply placement and routing strategies to minimize signal degradation and timing delays, ensuring robust I/O performance, essential for maintaining integrity in designs with high-frequency data transfer.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-16" tabindex="-1" aria-labelledby="pd-project-16-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">16</span>
+          <h3 id="pd-project-16-title">Multi-Vt Cell Selection for Power and Performance Trade-Off</h3>
+        </div>
+        <p class="project-detail-description">Implement a multi-Vt cell selection strategy to balance power and performance. Analyze timing paths to select the optimal Vt cells for minimal power consumption without compromising speed.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+      <article class="project-detail-section" id="pd-project-17" tabindex="-1" aria-labelledby="pd-project-17-title">
+        <div class="project-detail-heading">
+          <span class="project-detail-number" aria-hidden="true">17</span>
+          <h3 id="pd-project-17-title">RC Delay Minimization for Critical Paths</h3>
+        </div>
+        <p class="project-detail-description">Identify critical paths and optimize RC delays through wire sizing, buffer insertion, and placement adjustments. Focus on achieving timing closure by reducing delay on critical nets.</p>
+        <a class="project-back-link" href="#pd-projects"><span aria-hidden="true">↑</span> Back to Projects</a>
+      </article>
+</section>
+<!-- END GENERATED PROJECT CONTENT -->
+<nav class="project-category-links" aria-label="Other project categories"><a href="/projects/physical-design.html">Physical Design Projects</a><a href="/projects/design-verification.html">Design Verification Projects →</a></nav></section></main><footer class="inner-footer"><div class="inner-container footer-grid"><div class="footer-brand"><a class="inner-brand footer-logo" href="/" aria-label="Abhyasa home"><img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48"><span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span></a><p>Mastering VLSI Design for a Smarter Tomorrow</p></div><div><h2>Quick Links</h2><ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/#courses">Courses</a></li><li><a href="/projects/physical-design.html">Projects</a></li><li><a href="/placements.html">Placements</a></li><li><a href="/#blogs">Blogs</a></li><li><a href="/contact.html">Contact Us</a></li></ul></div><div><h2>Contact Info</h2><ul><li><a href="tel:+919438062982">+91 9438062982</a></li><li><a href="mailto:abhyasasemitech@gmail.com">abhyasasemitech@gmail.com</a></li><li><a href="mailto:hr@abhyasa.org.in">hr@abhyasa.org.in</a></li><li><a href="https://maps.app.goo.gl/x6nM2T9mB74tkHcb8">2nd Floor, Akhila Arcade, Rama Talkies Road, Asilmetta Junction, Visakhapatnam – 530016, Andhra Pradesh, India.</a></li></ul></div><div><h2>Follow Us</h2><ul class="social-list"><li><a href="https://www.linkedin.com/in/abhyasasemitech24/">LinkedIn</a></li><li><a href="https://www.youtube.com/@abhyasa_semitech">YouTube</a></li><li><a href="https://www.instagram.com/abhyasa_semitech/">Instagram</a></li><li><a href="https://x.com/abhyasasemitech">X</a></li></ul></div></div><div class="inner-container footer-legal"><p>Copyright © 2025 ABHYASA SEMICON TECHNOLOGIES. All rights reserved.</p></div></footer><script src="/projects-dropdown.js" defer></script></body></html>
+
+

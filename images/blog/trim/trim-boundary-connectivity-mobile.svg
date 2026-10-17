@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 622" role="img" aria-labelledby="title desc">
+<title id="title">Crossing wire before and after trimDesign, phone view</title><desc id="desc">The original wire crosses the selected boundary into an inside cell. The trimmed view shows the retained cell and wire inside the box, a new boundary port, and no wholly outside net.</desc>
+<rect width="360" height="622" rx="18" fill="#eef7ff"/>
+<text x="19" y="34" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#10345d">Trim boundary connectivity</text>
+<rect x="20" y="54" width="320" height="241" rx="11" fill="#f9fcff" stroke="#91a9c0" stroke-width="2"/>
+<text x="35" y="82" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#173c62">Original design</text>
+<rect x="86" y="99" width="223" height="166" rx="8" fill="#e9f9f0" stroke="#159a62" stroke-width="3" stroke-dasharray="9 6"/>
+<text x="99" y="126" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#08744c">Trim box</text>
+<rect x="207" y="151" width="72" height="49" rx="7" fill="#8eddbb" stroke="#258c66" stroke-width="2"/>
+<text x="219" y="181" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#165e47">Cell</text>
+<path d="M42 176h165" fill="none" stroke="#d48613" stroke-width="6"/>
+<text x="30" y="150" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#94600f">Crossing wire</text>
+<path d="M43 236h35" fill="none" stroke="#cf6772" stroke-width="5" stroke-dasharray="7 5"/>
+<circle cx="43" cy="236" r="5" fill="#cf6772"/><circle cx="78" cy="236" r="5" fill="#cf6772"/>
+<text x="35" y="285" font-family="Arial,sans-serif" font-size="16" fill="#a04350">Outside-only net</text>
+<path d="M180 305v28" stroke="#247ec2" stroke-width="4"/><path d="m169 322 11 12 11-12" fill="none" stroke="#247ec2" stroke-width="4"/>
+<rect x="20" y="347" width="320" height="238" rx="11" fill="#f9fcff" stroke="#91a9c0" stroke-width="2"/>
+<text x="35" y="375" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#173c62">Trimmed design</text>
+<rect x="86" y="392" width="223" height="160" rx="8" fill="#e9f9f0" stroke="#159a62" stroke-width="3" stroke-dasharray="9 6"/>
+<text x="99" y="419" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#08744c">Same trim box</text>
+<rect x="207" y="443" width="72" height="49" rx="7" fill="#8eddbb" stroke="#258c66" stroke-width="2"/>
+<text x="219" y="473" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#165e47">Cell</text>
+<path d="M86 468h121" fill="none" stroke="#d48613" stroke-width="6"/>
+<circle cx="86" cy="468" r="10" fill="#fff1cf" stroke="#b86d0c" stroke-width="3"/>
+<text x="102" y="531" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#94600f">New boundary port</text>
+<path d="M109 514 88 481" fill="none" stroke="#b86d0c" stroke-width="2"/>
+<text x="24" y="611" font-family="Arial,sans-serif" font-size="16" fill="#a04350">Outside-only net omitted</text>
+</svg>

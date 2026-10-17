@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Floorplanning the design: target and effective utilization, density, row spacing, instance groups, bounding boxes, and Innovus logical hierarchy commands.">
+  <title>Floorplanning the design | Abhyasa VLSI</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="/inner-pages-reference.css">
+  <link rel="stylesheet" href="/projects-dropdown.css">
+  <link rel="stylesheet" href="/floorplanning-article.css">
+</head>
+<body class="inner-page floorplanning-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="inner-header">
+    <div class="inner-container inner-nav-wrap">
+      <a class="inner-brand" href="/" aria-label="Abhyasa Semicon Technologies home">
+        <img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48">
+        <span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span>
+      </a>
+      <input class="nav-switch" type="checkbox" id="inner-nav-toggle">
+      <label class="menu-button" for="inner-nav-toggle"><span class="menu-icon" aria-hidden="true"></span><span class="sr-only">Toggle navigation</span></label>
+      <nav class="inner-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/#courses">Courses</a><a href="/about.html">About Us</a>
+        <a href="/projects/physical-design.html">Projects</a><a href="/placements.html">Placements</a>
+        <a href="/#blogs" aria-current="page">Blogs</a><a href="/contact.html">Contact Us</a>
+        <a class="button button-primary nav-cta" href="/#enrollment">Enroll Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="inner-container floorplanning-layout">
+    <aside class="article-toc" aria-label="Article navigation">
+      <h2>In This Blog</h2>
+      <nav aria-label="Sections in this article">
+        <a href="#target-utilization" aria-current="location"><span>1</span><span>Target Utilization Display (TU)</span></a>
+        <a href="#effective-utilization"><span>2</span><span>Effective Utilization Display (EU)</span></a>
+        <a href="#calculating-density"><span>3</span><span>Calculating Density</span></a>
+        <a href="#standard-row-spacing"><span>4</span><span>Standard Row Spacing</span></a>
+        <a href="#grouping-instances"><span>5</span><span>Grouping Instances</span></a>
+        <a href="#bounding-box"><span>6</span><span>Defining the Bounding Box</span></a>
+        <a href="#logical-hierarchy-without-new-hierarchy"><span>7</span><span>Adding Logical Hierarchy Without Creating Additional Hierarchy</span></a>
+        <a href="#logical-hierarchy-manipulation"><span>8</span><span>Logical Hierarchy Manipulation</span></a>
+      </nav>
+    </aside>
+    <article class="floorplanning-article" aria-labelledby="article-title">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">›</span>
+        <a href="/blog.html#physical-design-guides">Blogs</a><span aria-hidden="true">›</span>
+        <span>Physical Design</span><span aria-hidden="true">›</span>
+        <span aria-current="page">Floorplanning the Design</span>
+      </nav>
+      <header class="article-heading">
+        <p class="section-kicker">PHYSICAL DESIGN GUIDE</p>
+        <h1 id="article-title">Floorplanning the design</h1>
+      </header>
+
+      <div class="floor-sections">
+        <section class="floor-section" id="target-utilization" aria-labelledby="target-utilization-title">
+          <div class="floor-copy">
+            <div class="floor-title-row"><span class="floor-number" aria-hidden="true">01</span><h2 id="target-utilization-title">Target Utilization Display (TU)</h2></div>
+            <p>TU metric estimates how much of a module's area will be occupied by standard cells and hard macros. It does not account for placement blockages or routing constraints. Target Utilization (TU%) is specified by the user. When defining a floorplan or module constraints, the user sets a target utilization value to estimate how much of the area should be occupied by standard cells and hard macros. This percentage helps in balancing space usage while leaving enough room for routing and design adjustments. The initial TU values are specified during design import.</p>
+            <p><strong>Calculation:</strong> <span class="inline-formula">TU= (Standard Cell Area + Hard Macro Area)/(Module area)</span></p>
+            <p><strong>Usage and Constraints:</strong> TU values guide the customization of module shapes in the floorplan. When reshaping modules with the same area, they retain their TU values. The position of the module guide is a placement constraint, and the final definition of the module is determined by several factors, where the highest priority is given to connectivity between modules, while other constraints like preplaced blocks and routing blockages are considered but with lower priority.</p>
+            <p>A stronger constraint can be used to keep modules SH19 and SH7 close together by using the Group Instances form, and an even stronger constraint can be applied by saving the regrouped netlist.</p>
+          </div>
+          <figure class="diagram-figure ratio-wide" data-asset-id="floorplanning-figure-01" data-source-image="/images/blog/floorplan0.png">
+            <picture><source media="(max-width: 700px)" srcset="/images/blog/floorplanning/floorplanning-target-utilization-mobile.svg"><img src="/images/blog/floorplanning/floorplanning-target-utilization.svg" alt="Modules SH19 and SH7 are reshaped to wider rectangles while each retains TU=77.2%." width="800" height="450" decoding="async"></picture>
+            <figcaption>Figure 1 — Target utilization and module reshaping</figcaption>
+          </figure>
+        </section>
+
+        <section class="floor-section text-only" id="effective-utilization" aria-labelledby="effective-utilization-title">
+          <div class="floor-copy">
+            <div class="floor-title-row"><span class="floor-number" aria-hidden="true">02</span><h2 id="effective-utilization-title">Effective Utilization Display (EU)</h2></div>
+            <p>EU represents the actual utilization of cells and hard macros within fences or regions, considering placement or routing blockages, partition cuts, and other floorplan constraints. It provides a more accurate measure of utilization within specific areas of the design.</p>
+            <ul><li>EU values are updated manually by clicking the Query Area Density toolbar widget.</li><li>Usage: EU values should be updated before running placement to ensure accurate utilization.</li><li>If EU exceeds 100%, the fence or region is converted to a guide.</li><li>Since calculating EU values can be time-consuming for large designs, it is important to update them before placement.</li></ul>
+          </div>
+        </section>
+
+        <section class="floor-section text-only density-section" id="calculating-density" aria-labelledby="calculating-density-title">
+          <div class="floor-copy">
+            <div class="floor-title-row"><span class="floor-number" aria-hidden="true">03</span><h2 id="calculating-density-title">Calculating Density</h2></div>
+            <p>These calculations help specify the floorplan by determining the core and module sizes based on total density or standard cell density. The size of the core is smaller once floorplan is specified using Cell Utilization.</p>
+            <h3>Core Utilization</h3>
+            <p>Determines the initial size of the core area and module guides.</p>
+            <div class="formula-panel" role="group" aria-label="Core size equals standard cell area plus macro area plus halo, divided by core utilization">
+              <span>Core Size =</span><span class="fraction"><span>Standarad cell area + Macro area + Halo</span><span>Core Utilization</span></span>
+            </div>
+            <p>Higher core utilization means a smaller core size, while lower core utilization results in a larger core size with more whitespace.</p>
+            <h3>Cell Utilization</h3>
+            <p>Determines how densely objects can be packed by weighing standard cell density separately from hard macro density.</p>
+            <div class="formula-panel" role="group" aria-label="Core size equals standard cell area divided by cell utilization, plus macro area and halo">
+              <span>Core size =</span><span class="fraction"><span>Standard cell area</span><span>Cell utilization</span></span><span>+ Macro area + Halo</span>
+            </div>
+            <p>A lower cell utilization value results in more whitespace, reducing congestion but increasing die area. Higher cell utilization makes the design more compact but may lead to congestion issues.</p>
+          </div>
+        </section>
+
+        <section class="floor-section visual-first" id="standard-row-spacing" aria-labelledby="standard-row-spacing-title">
+          <div class="floor-copy">
+            <div class="floor-title-row"><span class="floor-number" aria-hidden="true">04</span><h2 id="standard-row-spacing-title">Standard Row Spacing</h2></div>
+            <p>The rows can be configured using the <code>setFPlanRowSpacingAndType</code> command, the <code>createRow</code> command, or the options from the Standard Cells Rows panel of the Specify Floorplan form.</p>
+            <p>The following are the row configurations supported:</p>
+            <ul><li>Example 1: Bottom R0 and flip/abut: <code>createRow -limitInCore -site CORE -spacing 5.4</code></li><li>Example 2: Bottom R0: <code>createRow -limitInCore –noAbut –noFlip -site CORE -spacing 5.4</code></li></ul>
+            <p>By default, spaces are inserted between pairs of rows. When <code>-noAbut</code> is enabled spaces are inserted between every row as well.</p>
+          </div>
+          <div class="figure-gallery" aria-label="Original Standard Row Spacing figures">
+            <figure class="diagram-figure ratio-row-options" data-asset-id="floorplanning-figure-02" data-source-image="/images/blog/floorplan1.png">
+              <picture><source media="(max-width: 700px)" srcset="/images/blog/floorplanning/floorplanning-row-options-mobile.svg"><img src="/images/blog/floorplanning/floorplanning-row-options.svg" alt="Six row configurations: Bottom R0 and flip/abut; Bottom MX and flip/abut; Bottom R0 and abut; Bottom R0 and flip; Bottom MX and flip; Bottom R0." width="1000" height="600" decoding="async" loading="lazy"></picture>
+              <figcaption>Figure 2 — Supported row configurations</figcaption>
+            </figure>
+            <figure class="diagram-figure ratio-row" data-asset-id="floorplanning-figure-03" data-source-image="/images/blog/floorplan2.png">
+              <img src="/images/blog/floorplanning/floorplanning-row-pair-spacing.svg" alt="Four standard-cell rows form two adjacent pairs; the row spacing dimension marks the gap between those pairs." width="520" height="400" decoding="async" loading="lazy">
+              <figcaption>Figure 3 — Row spacing between paired rows</figcaption>
+            </figure>
+            <figure class="diagram-figure ratio-row" data-asset-id="floorplanning-figure-04" data-source-image="/images/blog/floorplan3.png">
+              <img src="/images/blog/floorplanning/floorplanning-every-row-spacing.svg" alt="Four separate standard-cell rows show equal spacing at each row gap, labeled row spacing for every 1 row." width="520" height="400" decoding="async" loading="lazy">
+              <figcaption>Figure 4 — Row spacing for every row</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="floor-section wide-technical-section" id="grouping-instances" aria-labelledby="grouping-instances-title">
+          <div class="floor-copy">
+            <div class="floor-title-row"><span class="floor-number" aria-hidden="true">05</span><h2 id="grouping-instances-title">Grouping Instances</h2></div>
+            <p>Instance groups are used to create a new logical hierarchy unit, and all power domains associated with an instance group are assigned a constraint fence. You can create a new instance group using the <code>createInstGroup</code> command or the Group Instances form, even outside the core boundary.</p>
+            <p>A constraint fence ensures that only its own standard cells are placed inside, and no other cells are allowed within.</p>
+            <p>Cadence recommends that physical-logical coherence for constraint fences must always be preserved. This requirement applies not only to instance groups but also to all hinsts and instance groups having constraint fences.</p>
+            <p>Simply put, if fence A is logically part of fence B, then fence A must be physically placed inside fence B to maintain coherence.</p>
+            <p>When a new instance group is created, its hierarchy is formed at the common point of the modules and submodules added to that group. For example, if submodules B and F are added to a new group called group_A, the hierarchy is adjusted starting from their common connection point.</p>
+            <p>To add an instance to an existing instance group, use the <code>addInstToInstGroup</code> command or select the module(s), then go to Floorplan → Instance Group and choose the group name.</p>
+            <p>To delete an instance from an instance group, use the <code>deleteInstFromInstGroup</code> command or select the module(s) in Tools → Design Browser, and click the Delete Group/Group Member icon.</p>
+          </div>
+          <figure class="diagram-figure ratio-hierarchy-wide" data-asset-id="floorplanning-figure-05" data-source-image="/images/blog/floorplan4.png">
+            <picture><source media="(max-width: 700px)" srcset="/images/blog/floorplanning/floorplanning-instance-grouping-mobile.svg"><img src="/images/blog/floorplanning/floorplanning-instance-grouping.svg" alt="Before and after hierarchy comparison. Instances B and F move from under D into group_A under TOP; all other source parent-child relationships are retained." width="1200" height="390" decoding="async" loading="lazy"></picture>
+            <figcaption>Figure 5 — Instance grouping and logical hierarchy</figcaption>
+          </figure>
+        </section>
+
+        <section class="floor-section visual-first" id="bounding-box" aria-labelledby="bounding-box-title">
+          <div class="floor-copy">
+            <div class="floor-title-row"><span class="floor-number" aria-hidden="true">06</span><h2 id="bounding-box-title">Defining the Bounding Box</h2></div>
+            <p><code>setObjFPlanBox</code> – Innovus command used in floorplan to define a bounding box of a specified object.</p>
+            <p><code>setObjFPlanBoxList</code> – Innovus command used to define rectilinear shape of an object, which is comprised of two or more boxes.</p>
+            <p><strong>Eg 1</strong></p>
+            <pre><code>setObjFPlanBox Module A 142.0 120.0 605.0 545.0</code></pre>
+            <p><strong>Eg 2</strong></p>
+            <pre><code>setObjFPlanBoxList Module B 356.46 532.6 692.50 720.7 483.46 720.7 692.50 934.67</code></pre>
+            <p>The rectilinear boundary is made up of two bounding boxes: (356.46 532.6 692.50 720.7) and (483.46 720.7 692.50 934.67)</p>
+          </div>
+          <div class="figure-gallery bounding-gallery" aria-label="Original bounding box figures">
+            <figure class="diagram-figure ratio-bbox" data-asset-id="floorplanning-figure-06" data-source-image="/images/blog/floorplan5.png">
+              <picture><source media="(max-width: 700px)" srcset="/images/blog/floorplanning/floorplanning-bounding-box-mobile.svg"><img src="/images/blog/floorplanning/floorplanning-bounding-box.svg" alt="Module A bounding box from lower-left coordinate (142.0, 120.0) to upper-right coordinate (605.0, 545.0)." width="800" height="430" decoding="async" loading="lazy"></picture>
+              <figcaption>Figure 6 — Module A bounding box</figcaption>
+            </figure>
+            <figure class="diagram-figure ratio-bbox" data-asset-id="floorplanning-figure-07" data-source-image="/images/blog/floorplan6.png">
+              <picture><source media="(max-width: 700px)" srcset="/images/blog/floorplanning/floorplanning-rectilinear-bounding-box-mobile.svg"><img src="/images/blog/floorplanning/floorplanning-rectilinear-bounding-box.svg" alt="Module B is an L-shaped union of two rectangles sharing the edge y=720.7, using the two coordinate pairs from the article command." width="800" height="430" decoding="async" loading="lazy"></picture>
+              <figcaption>Figure 7 — Rectilinear Module B bounding boxes</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="floor-section text-only" id="logical-hierarchy-without-new-hierarchy" aria-labelledby="logical-hierarchy-without-new-hierarchy-title">
+          <div class="floor-copy">
+            <div class="floor-title-row"><span class="floor-number" aria-hidden="true">07</span><h2 id="logical-hierarchy-without-new-hierarchy-title">Adding Logical Hierarchy Without Creating Additional Hierarchy</h2></div>
+            <p>Innovus software enables to add logical hierarchy without creating additional hierarchy.</p>
+            <pre><code>createInstGroup /TTT -isPhyHier
+addInstToInstGroup /TTT U5
+addInstToInstGroup /TTT U7
+createLogicHierarchy -commit -cell aa -newHinst TTT -objects U5 U7</code></pre>
+            <p>The leading slash character (/) in /TTT is required for the software to create a temporary group named /TTT.</p>
+          </div>
+        </section>
+
+        <section class="floor-section visual-first wide-technical-section" id="logical-hierarchy-manipulation" aria-labelledby="logical-hierarchy-manipulation-title">
+          <div class="floor-copy">
+            <div class="floor-title-row"><span class="floor-number" aria-hidden="true">08</span><h2 id="logical-hierarchy-manipulation-title">Logical Hierarchy Manipulation:</h2></div>
+            <ul><li>To move an instance to a new top module named TOP101, the following are the Innovus commands:</li></ul>
+            <pre><code>createInstGroup TOP101 -isPhyHier
+addInstToInstGroup TOP101 PMEMDSP/PRAMDLD/U10
+addInstToInstGroup TOP101 PMEMDSP/PRAMDLD/U11
+createLogicHierarchy -commit -cell aa -newHinst TOP101 -objects PMEMDSP/PRAMDLD/U10 PMEMDSP/PRAMDLD/U11</code></pre>
+            <ul><li>To move an instance to an existing module named DRAMDSP/DRAMDLD,</li></ul>
+            <pre><code>createInstGroup /DRAMDSP/DRAMDLD -isPhyHier
+addInstToInstGroup /DRAMDSP/DRAMDLD DIFTOP/DIF/U13
+addInstToInstGroup /DRAMDSP/DRAMDLD DIFTOP/DIF/U14
+createLogicHierarchy -commit -cell aa -newHinst /DRAMDSP/DRAMDLD -objects DIFTOP/DIF/U13 DIFTOP/DIF/U14</code></pre>
+          </div>
+          <figure class="diagram-figure ratio-tree" data-asset-id="floorplanning-figure-08" data-source-image="/images/blog/floorplan7.png">
+            <picture><source media="(max-width: 700px)" srcset="/images/blog/floorplanning/floorplanning-logical-hierarchy-mobile.svg"><img src="/images/blog/floorplanning/floorplanning-logical-hierarchy.svg" alt="TTT branches to AAA, BBB and one combined U5, U7 leaf. AAA and BBB each branch through three named modules to their source leaf instances." width="1400" height="500" decoding="async" loading="lazy"></picture>
+            <figcaption>Figure 8 — Logical hierarchy manipulation</figcaption>
+          </figure>
+        </section>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="inner-footer">
+    <div class="inner-container footer-grid">
+      <div class="footer-brand"><a class="inner-brand footer-logo" href="/" aria-label="Abhyasa Semicon Technologies home"><img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48"><span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span></a><p>Mastering VLSI Design for a Smarter Tomorrow</p></div>
+      <div><h2>Quick Links</h2><ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/#courses">Courses</a></li><li><a href="/projects/physical-design.html">Projects</a></li><li><a href="/placements.html">Placements</a></li><li><a href="/#blogs">Blogs</a></li><li><a href="/contact.html">Contact Us</a></li></ul></div>
+      <div><h2>Contact Info</h2><ul><li><a href="tel:+919438062982">+91 9438062982</a></li><li><a href="mailto:abhyasasemitech@gmail.com">abhyasasemitech@gmail.com</a></li><li><a href="mailto:hr@abhyasa.org.in">hr@abhyasa.org.in</a></li><li><a href="https://maps.app.goo.gl/x6nM2T9mB74tkHcb8" target="_blank" rel="noopener noreferrer">2nd Floor, Akhila Arcade, Rama Talkies Road, Asilmetta Junction, Visakhapatnam – 530016, Andhra Pradesh, India.</a></li></ul></div>
+      <div><h2>Follow Us</h2><ul class="social-list"><li><a href="https://www.linkedin.com/in/abhyasasemitech24/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://www.youtube.com/@abhyasa_semitech" target="_blank" rel="noopener noreferrer">YouTube</a></li><li><a href="https://www.instagram.com/abhyasa_semitech/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://x.com/abhyasasemitech" target="_blank" rel="noopener noreferrer">X</a></li></ul></div>
+    </div><div class="inner-container footer-legal"><p>Copyright © 2025 ABHYASA SEMICON TECHNOLOGIES. All rights reserved.</p></div>
+  </footer>
+  <script src="/projects-dropdown.js" defer></script>
+  <script src="/floorplanning-article.js" defer></script>
+</body>
+</html>

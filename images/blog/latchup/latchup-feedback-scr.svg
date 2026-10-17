@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+<title id="title">Parasitic PNP and NPN regenerative feedback</title>
+<desc id="desc">Conceptual SCR equivalent. A PNP emitter connects to VDD and an NPN emitter to ground. PNP collector current raises the local P-substrate potential through substrate resistance and drives the NPN base. NPN collector current lowers the local N-well potential through well resistance and drives the PNP base. No values are implied.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fbfdff"/><stop offset="1" stop-color="#eaf4ff"/></linearGradient><marker id="redArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10z" fill="#d84f59"/></marker></defs>
+<rect width="1000" height="560" rx="24" fill="url(#bg)"/><text x="40" y="48" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#17345c">Regenerative feedback · conceptual SCR equivalent</text>
+<g font-family="Arial,sans-serif" fill="#17345c" stroke-linecap="round" stroke-linejoin="round">
+<text x="190" y="95" text-anchor="middle" font-size="21" font-weight="700">VDD</text><path d="M190 106v33" stroke="#496782" stroke-width="4"/>
+<text x="810" y="95" text-anchor="middle" font-size="21" font-weight="700">GND</text><path d="M810 106v33" stroke="#496782" stroke-width="4"/>
+<!-- PNP emitter, base and collector terminals -->
+<rect x="95" y="135" width="350" height="250" rx="18" fill="#f1eaff" stroke="#9274d4" stroke-width="3"/><text x="270" y="170" text-anchor="middle" font-size="22" font-weight="700">QP · parasitic PNP</text>
+<circle cx="270" cy="270" r="53" fill="#fff" stroke="#7657c8" stroke-width="4"/><text x="270" y="278" text-anchor="middle" font-size="26" font-weight="700">QP</text>
+<path d="M270 139v78M270 323v45M217 270h-44" fill="none" stroke="#7657c8" stroke-width="5"/><text x="284" y="205" font-size="17">E</text><text x="284" y="365" font-size="17">C</text><text x="148" y="263" font-size="17">B</text>
+<path d="M190 139h80" stroke="#496782" stroke-width="4"/>
+<!-- NPN emitter, base and collector terminals -->
+<rect x="555" y="135" width="350" height="250" rx="18" fill="#e6f7f2" stroke="#37a88d" stroke-width="3"/><text x="730" y="170" text-anchor="middle" font-size="22" font-weight="700">QN · parasitic NPN</text>
+<circle cx="730" cy="270" r="53" fill="#fff" stroke="#159b81" stroke-width="4"/><text x="730" y="278" text-anchor="middle" font-size="26" font-weight="700">QN</text>
+<path d="M730 139v78M730 323v45M783 270h44" fill="none" stroke="#159b81" stroke-width="5"/><text x="744" y="205" font-size="17">C</text><text x="744" y="365" font-size="17">E</text><text x="835" y="263" font-size="17">B</text>
+<path d="M730 368v17h80v-246" fill="none" stroke="#496782" stroke-width="4"/>
+<!-- distributed well/substrate resistances and base nodes -->
+<!-- QP collector to QN base: substrate spreading resistance -->
+<path d="M270 323v106h170M520 429h307v-159" fill="none" stroke="#e59b21" stroke-width="4"/><path d="M440 429l15-15 15 30 15-30 15 30 15-30 15 15" fill="none" stroke="#e59b21" stroke-width="5"/><circle cx="827" cy="270" r="8" fill="#e59b21"/><text x="500" y="472" text-anchor="middle" font-size="17" font-weight="700" fill="#9a5b16">Rsub · QP collector current biases QN base</text>
+<!-- QN collector to QP base: well spreading resistance -->
+<path d="M730 217V105H173v165" fill="none" stroke="#8a67cd" stroke-width="4"/><path d="M430 105l15-15 15 30 15-30 15 30 15-30 15 15" fill="none" stroke="#8a67cd" stroke-width="5"/><circle cx="173" cy="270" r="8" fill="#8a67cd"/><text x="500" y="82" text-anchor="middle" font-size="17" font-weight="700" fill="#6645a6">Rwell · QN collector current biases QP base</text>
+</g>
+<rect x="255" y="490" width="490" height="42" rx="19" fill="#fff" stroke="#cadaed"/><text x="500" y="517" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#17345c">Coupled parasitics create regenerative PNPN feedback</text>
+</svg>

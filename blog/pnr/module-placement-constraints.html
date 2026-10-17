@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Understand None, Guide, Fence, Region, and Soft Guide/Cluster module placement constraints in Cadence Innovus, with source-preserved commands and diagrams reserved for technical review.">
+  <title>Module Placement Constraints in Physical Design | Abhyasa VLSI</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="/inner-pages-reference.css">
+  <link rel="stylesheet" href="/projects-dropdown.css">
+  <link rel="stylesheet" href="/module-placement-constraints.css">
+</head>
+<body class="inner-page placement-constraints-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="inner-header">
+    <div class="inner-container inner-nav-wrap">
+      <a class="inner-brand" href="/" aria-label="Abhyasa Semicon Technologies home">
+        <img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48">
+        <span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span>
+      </a>
+      <input class="nav-switch" type="checkbox" id="inner-nav-toggle">
+      <label class="menu-button" for="inner-nav-toggle"><span class="menu-icon" aria-hidden="true"></span><span class="sr-only">Toggle navigation</span></label>
+      <nav class="inner-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/#courses">Courses</a><a href="/about.html">About Us</a>
+        <a href="/projects/physical-design.html">Projects</a><a href="/placements.html">Placements</a>
+        <a href="/#blogs" aria-current="page">Blogs</a><a href="/contact.html">Contact Us</a>
+        <a class="button button-primary nav-cta" href="/#enrollment">Enroll Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="inner-container pc-layout">
+    <article class="pc-article" aria-labelledby="article-title">
+      <nav class="pc-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">›</span><a href="/blog.html#pd-essentials">Blogs</a><span aria-hidden="true">›</span><span>PD Essentials</span><span aria-hidden="true">›</span><span aria-current="page">Module Placement Constraints</span>
+      </nav>
+      <header class="pc-heading">
+        <h1 id="article-title">Module placement constraints in physical design</h1>
+        <p class="pc-intro">Working with Cadence Innovus, designers need to control cell placement efficiently to optimize performance, congestion, and timing closure. Innovus provides multiple module placement constraints that guide and restrict module locations within the core design area: None, Guide, Fence, Region and Soft Guide/Cluster.</p>
+      </header>
+
+      <div class="pc-sections">
+        <section class="pc-section" id="none" aria-labelledby="none-title">
+          <div class="pc-copy">
+            <h2 id="none-title"><span class="pc-number" aria-hidden="true">01</span><span>None</span></h2>
+            <p>When a module is assigned the None constraint, it means that the module is not pre-placed within the core design area. However, this does not mean that it lacks placement control. The module may still be moved into the core area during optimization or loaded using a floorplan file.</p>
+          </div>
+          <figure class="pc-figure" data-asset-id="placement-constraint-figure-05" data-asset-status="integrated" aria-label="None constraint schematic floorplan diagram.">
+            <picture><source media="(max-width:700px)" srcset="/images/blog/placement-constraints/placement-none-mobile.svg"><img class="pc-diagram" src="/images/blog/placement-constraints/placement-none.svg" alt="None constraint: module cells shown after automatic placement in the core, without a module-specific pre-placement boundary." width="600" height="360" decoding="async"></picture>
+            <figcaption>Supplementary figure — None constraint (no module-specific pre-placement)</figcaption>
+          </figure>
+        </section>
+
+        <section class="pc-section pc-visual-first" id="guide" aria-labelledby="guide-title">
+          <div class="pc-copy">
+            <h2 id="guide-title"><span class="pc-number" aria-hidden="true">02</span><span>Guide</span></h2>
+            <p>A Guide is a soft constraint that helps in placing cells closer together but does not enforce strict placement rules. It represents a logical grouping of instances in the netlist and assists the placement engine in keeping related components nearby.</p>
+            <div class="pc-code"><span>Source command</span><pre><code>createGuide object_name bbox</code></pre></div>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Represents the logical module structure of the netlist.</li>
+              <li>Helps in placing cells of the module close to each other within the suggested area.</li>
+              <li>Appears as pink objects in the Floorplan view (by default) after the design is imported, but before floorplanning.</li>
+              <li>The module guide snaps to a standard cell row (vertically) and to a metal 2 pitch (horizontally) (the default). This default can be changed to snap to the manufacture grid (in the Preferences form's Floorplan page).</li>
+              <li>Does not enforce strict placement, meaning cells can be slightly displaced based on connectivity requirements.</li>
+            </ul>
+          </div>
+          <figure class="pc-figure" data-asset-id="placement-constraint-figure-01" data-asset-status="integrated" aria-label="Guide constraint schematic floorplan diagram.">
+            <picture><source media="(max-width:700px)" srcset="/images/blog/placement-constraints/placement-guide-mobile.svg"><img class="pc-diagram" src="/images/blog/placement-constraints/placement-guide.svg" alt="Guide constraint: related cells are near a dashed preferred area, with one extending just outside it." width="600" height="360" loading="lazy" decoding="async"></picture>
+            <figcaption>Figure 1 — Guide constraint (schematic placement example)</figcaption>
+          </figure>
+        </section>
+
+        <section class="pc-section" id="fence" aria-labelledby="fence-title">
+          <div class="pc-copy">
+            <h2 id="fence-title"><span class="pc-number" aria-hidden="true">03</span><span>Fence</span></h2>
+            <p>A Fence is a hard constraint that strictly confines a module within a fixed area. It prevents cells from moving outside the defined boundary and restricts other instances from entering the area.</p>
+            <div class="pc-code"><span>Source command</span><pre><code>createFence object_name bbox</code></pre></div>
+            <p><strong>Example:</strong> Consider a memory block that needs to be placed in a specific region to optimize data flow. A Fence ensures that no other cells intrude, maintaining predictable timing and congestion.</p>
+            <h3>Key Features</h3>
+            <ul>
+              <li>When a hierarchical instance is defined as a partition, its constraint type changes to a fence.</li>
+              <li>The fence outline is rigid, meaning all instances must remain within the boundary.</li>
+              <li>Non-child instances from other modules cannot be placed inside the fence.</li>
+              <li>This hard restriction is necessary to ensure consistency with third-party backend tools.</li>
+            </ul>
+          </div>
+          <figure class="pc-figure" data-asset-id="placement-constraint-figure-02" data-asset-status="integrated" aria-label="Fence constraint schematic floorplan diagram.">
+            <picture><source media="(max-width:700px)" srcset="/images/blog/placement-constraints/placement-fence-mobile.svg"><img class="pc-diagram" src="/images/blog/placement-constraints/placement-fence.svg" alt="Fence constraint: assigned cells inside the exclusive fence and other cells outside." width="600" height="360" loading="lazy" decoding="async"></picture>
+            <figcaption>Figure 2 — Fence constraint (schematic placement example)</figcaption>
+          </figure>
+        </section>
+
+        <section class="pc-section pc-visual-first" id="region" aria-labelledby="region-title">
+          <div class="pc-copy">
+            <h2 id="region-title"><span class="pc-number" aria-hidden="true">04</span><span>Region</span></h2>
+            <p>A Region is similar to a Fence, but it is less restrictive. Other instances can be placed inside a region, but priority is given to the assigned module.</p>
+            <div class="pc-code"><span>Source command</span><pre><code>createRegion object_name bbox</code></pre></div>
+            <p><strong>Example:</strong> If you have an ALU (Arithmetic Logic Unit) in a multi-core processor, a Region can keep its logic in a dedicated area, but some unrelated cells may still be placed within that area if needed.</p>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Unlike a fence, other instances from different modules can be placed inside a region.</li>
+              <li>A module guide automatically changes to a Region when it is pre-placed in the core design area.</li>
+              <li>Helps in grouping cells together while still allowing some flexibility.</li>
+            </ul>
+          </div>
+          <figure class="pc-figure" data-asset-id="placement-constraint-figure-03" data-asset-status="integrated" aria-label="Region constraint schematic floorplan diagram.">
+            <picture><source media="(max-width:700px)" srcset="/images/blog/placement-constraints/placement-region-mobile.svg"><img class="pc-diagram" src="/images/blog/placement-constraints/placement-region.svg" alt="Region constraint: assigned cells inside a region with other cells also allowed inside." width="600" height="360" loading="lazy" decoding="async"></picture>
+            <figcaption>Figure 3 — Region constraint (schematic placement example)</figcaption>
+          </figure>
+        </section>
+
+        <section class="pc-section" id="soft-guide" aria-labelledby="soft-guide-title">
+          <div class="pc-copy">
+            <h2 id="soft-guide-title"><span class="pc-number" aria-hidden="true">05</span><span>Soft Guide/Cluster</span></h2>
+            <p>A Soft Guide, also known as a Cluster, is an even looser constraint than a Guide. It does not specify an exact placement location but ensures that grouped instances stay relatively close to each other.</p>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Similar to a Guide, but it does not enforce any specific location constraints.</li>
+              <li>Ensures that the grouped instances stay relatively close but allows some cells to be placed further if necessary.</li>
+              <li>Less restrictive than Fence or Region, meaning placements may spread out if required for connectivity.</li>
+              <li>The placement engine can control the degree of closeness using the command:</li>
+            </ul>
+            <div class="pc-code"><span>Source command</span><pre><code>setPlaceMode -place_global_soft_guide_strength</code></pre></div>
+          </div>
+          <figure class="pc-figure" data-asset-id="placement-constraint-figure-04" data-asset-status="integrated" aria-label="Soft Guide/Cluster schematic floorplan diagram.">
+            <picture><source media="(max-width:700px)" srcset="/images/blog/placement-constraints/placement-soft-guide-mobile.svg"><img class="pc-diagram" src="/images/blog/placement-constraints/placement-soft-guide.svg" alt="Soft Guide/Cluster: related cells kept near each other without a fixed boundary." width="600" height="360" loading="lazy" decoding="async"></picture>
+            <figcaption>Figure 4 — Soft Guide/Cluster (schematic placement example)</figcaption>
+          </figure>
+          <aside class="pc-note">
+            <h3>Removing a Guide, Fence, or Region</h3>
+            <p>To delete the Guide / Fence / Region for the module use:</p>
+            <div class="pc-code"><span>Source command and example</span><pre><code>unplaceGuide object_name</code></pre></div>
+            <p>Source example: <code>unplaceGuide object_name</code></p>
+          </aside>
+        </section>
+
+        <section class="pc-comparison" id="comparison" aria-labelledby="comparison-title">
+          <h2 id="comparison-title">Key Differences</h2>
+          <div class="pc-table-wrap" tabindex="0" role="region" aria-label="Scrollable placement constraint comparison table">
+            <table>
+              <caption>Comparison based on the original article descriptions</caption>
+              <thead><tr><th scope="col">Constraint</th><th scope="col">Placement behavior in source</th><th scope="col">Other instances inside?</th><th scope="col">Source-described role</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">None</th><td>Not pre-placed; may still move into the core during optimization or load from a floorplan file.</td><td>Not specified</td><td>No module pre-placement constraint</td></tr>
+                <tr><th scope="row">Guide</th><td>Soft grouping; helps keep related cells close and can allow displacement for connectivity.</td><td>Not specified</td><td>Logical grouping and proximity</td></tr>
+                <tr><th scope="row">Fence</th><td>Hard boundary; module instances stay inside.</td><td>No; source says non-child instances cannot enter</td><td>Strict confinement</td></tr>
+                <tr><th scope="row">Region</th><td>Assigned module has priority in its region.</td><td>Yes; source explicitly allows other instances</td><td>Grouping with placement flexibility</td></tr>
+                <tr><th scope="row">Soft Guide/Cluster</th><td>Proximity preference; no exact location and some instances may be farther apart.</td><td>Not specified</td><td>Keep grouped instances relatively close</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <aside class="pc-toc article-toc" aria-label="Article navigation">
+      <h2>In This Blog</h2>
+      <nav aria-label="On this page">
+        <a href="#none"><span>01</span><span>None</span></a>
+        <a href="#guide"><span>02</span><span>Guide</span></a>
+        <a href="#fence"><span>03</span><span>Fence</span></a>
+        <a href="#region"><span>04</span><span>Region</span></a>
+        <a href="#soft-guide"><span>05</span><span>Soft Guide / Cluster</span></a>
+        <a href="#comparison"><span>↔</span><span>Key Differences</span></a>
+      </nav>
+      <section class="pc-related" aria-labelledby="related-title">
+        <h2 id="related-title">Related Blogs</h2>
+        <a href="/blog/pnr/floorplanning-the-design.html">Floorplanning the Design <span aria-hidden="true">→</span></a>
+        <a href="/blog/pnr/latchup-effect.html">Latchup Effect <span aria-hidden="true">→</span></a>
+        <a href="/blog/pnr/trim-design.html">Trim Design <span aria-hidden="true">→</span></a>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="inner-footer">
+    <div class="inner-container footer-grid">
+      <div class="footer-brand"><a class="inner-brand footer-logo" href="/" aria-label="Abhyasa Semicon Technologies home"><img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48"><span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span></a><p>Mastering VLSI Design for a Smarter Tomorrow</p></div>
+      <div><h2>Quick Links</h2><ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/#courses">Courses</a></li><li><a href="/projects/physical-design.html">Projects</a></li><li><a href="/placements.html">Placements</a></li><li><a href="/#blogs">Blogs</a></li><li><a href="/contact.html">Contact Us</a></li></ul></div>
+      <div><h2>Contact Info</h2><ul><li><a href="tel:+919438062982">+91 9438062982</a></li><li><a href="mailto:abhyasasemitech@gmail.com">abhyasasemitech@gmail.com</a></li><li><a href="mailto:hr@abhyasa.org.in">hr@abhyasa.org.in</a></li><li><a href="https://maps.app.goo.gl/x6nM2T9mB74tkHcb8" target="_blank" rel="noopener noreferrer">2nd Floor, Akhila Arcade, Rama Talkies Road, Asilmetta Junction, Visakhapatnam – 530016, Andhra Pradesh, India.</a></li></ul></div>
+      <div><h2>Follow Us</h2><ul class="social-list"><li><a href="https://www.linkedin.com/in/abhyasasemitech24/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://www.youtube.com/@abhyasa_semitech" target="_blank" rel="noopener noreferrer">YouTube</a></li><li><a href="https://www.instagram.com/abhyasa_semitech/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://x.com/abhyasasemitech" target="_blank" rel="noopener noreferrer">X</a></li></ul></div>
+    </div><div class="inner-container footer-legal"><p>Copyright © 2025 ABHYASA SEMICON TECHNOLOGIES. All rights reserved.</p></div>
+  </footer>
+  <script src="/projects-dropdown.js" defer></script>
+  <script src="/module-placement-constraints.js" defer></script>
+  <script src="/pd-essentials-blog-card.js" defer></script>
+</body>
+</html>

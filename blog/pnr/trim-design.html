@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how Innovus trimDesign isolates a selected portion of a physical design, including its retained data, command examples, output requirements, and limitations.">
+  <title>Trimming a Design in Innovus (trimDesign) | Abhyasa VLSI</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="/inner-pages-reference.css">
+  <link rel="stylesheet" href="/projects-dropdown.css">
+  <link rel="stylesheet" href="/trim-article.css">
+</head>
+<body class="inner-page trim-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="inner-header">
+    <div class="inner-container inner-nav-wrap">
+      <a class="inner-brand" href="/" aria-label="Abhyasa Semicon Technologies home">
+        <img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48">
+        <span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span>
+      </a>
+      <input class="nav-switch" type="checkbox" id="inner-nav-toggle">
+      <label class="menu-button" for="inner-nav-toggle"><span class="menu-icon" aria-hidden="true"></span><span class="sr-only">Toggle navigation</span></label>
+      <nav class="inner-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/#courses">Courses</a><a href="/about.html">About Us</a>
+        <a href="/projects/physical-design.html">Projects</a>
+        <a href="/placements.html">Placements</a><a href="/#blogs" aria-current="page">Blogs</a><a href="/contact.html">Contact Us</a>
+        <a class="button button-primary nav-cta" href="/#enrollment">Enroll Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="inner-container trim-layout">
+    <article class="trim-article" aria-labelledby="article-title">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">›</span><a href="/blog.html#pd-essentials">Blogs</a><span aria-hidden="true">›</span><span>PD Essentials</span><span aria-hidden="true">›</span><span aria-current="page">Trim Design</span>
+      </nav>
+      <header class="trim-heading">
+        <h1 id="article-title">Trimming a Design in Innovus (trimDesign)</h1>
+        <p class="trim-intro">Efficiently manage large VLSI designs with trimDesign.</p>
+        <p class="trim-intro">In semiconductor design, it is not always practical to share the entire design, especially when it contains third-party IP data. Instead, a trimmed version of the design can be created, allowing engineers to focus on a smaller portion while maintaining confidentiality. The trimDesign command in Innovus facilitates this by extracting a specific section of the layout while retaining essential physical data. This approach significantly reduces memory usage and enhances debugging efficiency</p>
+      </header>
+
+      <div class="trim-sections">
+        <section class="trim-section text-only" id="benefits" aria-labelledby="benefits-title">
+          <div class="trim-copy">
+            <h2 id="benefits-title"><span class="trim-number" aria-hidden="true">01</span><span>Benefits of trimDesign</span></h2>
+            <ul>
+              <li>Enables engineers to debug and analyze smaller sections independently.</li>
+              <li>Retains all placement and routing violations (checkPlace and verify_drc).</li>
+              <li>Maintains crucial design elements like instances, macros, routing/placement blockages, and wire attributes.</li>
+              <li>Eliminates hierarchical information for confidentiality.</li>
+              <li>Encrypts object names for added data protection (customizable options).</li>
+              <li>Reduces memory footprint and improves turnaround time for analysis</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="trim-section visual-first" id="working" aria-labelledby="working-title">
+          <div class="trim-copy">
+            <h2 id="working-title"><span class="trim-number" aria-hidden="true">02</span><span>Working of trimDesign</span></h2>
+            <p>The trimDesign process extracts a defined portion of a larger design by specifying a coordinate box. The extracted section retains its physical attributes while discarding timing and power domain data. However, since it remains physically equivalent to the original design, it allows for meaningful placement and DRC verification. The LEF file must be shared alongside the trimmed design for proper placement and DRC verification</p>
+          </div>
+          <figure class="trim-figure" data-asset-id="trim-source-figure-01" data-source-image="/images/blog/trmd.png">
+            <picture><source media="(max-width: 700px)" srcset="/images/blog/trim/trim-selection-mobile.svg"><img src="/images/blog/trim/trim-selection.svg" alt="The selected box becomes an independent design. A hard macro overlapping its boundary remains at the same relative position; objects wholly outside are excluded." width="640" height="340"></picture>
+            <figcaption>Selected trim area, including an overlapping hard macro, and the resulting independent design</figcaption>
+          </figure>
+          <div class="trim-working-followup" aria-label="Original trimDesign command examples and continuation">
+            <div class="trim-code-example"><pre><code>trimDesign –dir DB –name trim_db –area {300.0 200.0 900.0 700.0}</code></pre></div>
+            <div class="trim-code-example"><pre><code>trimDesign –selectedRouteBlk</code></pre></div>
+            <div class="trim-code-example"><pre><code>trimDesign –dir DB –name trim_db –area {300.0 200.0 800.0 700.0} -encryptName gen_new_name</code></pre></div>
+            <p class="trim-working-note trim-copy">During the trim process, the specified trim box/area is snapped to the instance grid. All instances in the selected area lose their original logic hierarchy and appear flat in the new database. Any naming conflicts arising due to flattening are resolved automatically, with a mapping file generated for reference. Additionally, trimDesign does not save binary data; instead, it stores DEF, Verilog, and LEF information in .txt format.</p>
+          </div>
+        </section>
+
+        <section class="trim-section" id="trimmed-design" aria-labelledby="trimmed-title">
+          <div class="trim-copy">
+            <h2 id="trimmed-title"><span class="trim-number" aria-hidden="true">03</span><span>What Happens with the Trimmed Design?</span></h2>
+            <ul>
+              <li>Permanent Modification: Once a design is trimmed, it cannot be reconstructed back into the original design. Attempting to merge it back is not supported.</li>
+              <li>Flattened Structure: Instances within the trim area lose their original hierarchy and appear flat.</li>
+              <li>Violation Preservation: The checkPlace and verify_drc commands will still detect the same placement and DRC violations, except for those related to hierarchical constraints</li>
+              <li>Possible Additional DRC Violations: Some minor extra violations may appear due to boundary conditions in net wire preservation</li>
+              <li>Automated Naming Adjustments: Instance and net names are automatically modified if conflicts arise, with a mapping file created for reference.</li>
+              <li>Saving the data: The trimDesign does not save binary data; instead, it stores DEF, Verilog, and LEF information in .txt format.</li>
+            </ul>
+          </div>
+          <figure class="trim-figure" data-asset-id="trim-flattened-hierarchy">
+            <picture><source media="(max-width: 700px)" srcset="/images/blog/trim/trim-hierarchy-mobile.svg"><img src="/images/blog/trim/trim-hierarchy.svg" alt="Cadence guide example: two original instance paths, h1/h2/i1 and h1/h4/i1, map to flat names i1 and i1_uniquify1; a map file records the changes." width="600" height="350" loading="lazy"></picture>
+            <figcaption>Flattened instance names and the generated mapping file</figcaption>
+          </figure>
+        </section>
+
+        <section class="trim-section visual-first" id="key-aspects" aria-labelledby="aspects-title">
+          <div class="trim-copy">
+            <h2 id="aspects-title"><span class="trim-number" aria-hidden="true">04</span><span>Key Aspects of the Trimmed Design</span></h2>
+            <ul>
+              <li>Instances and Macros: Instances inside the trim area retain attributes, but hierarchical information is lost. Hard macros overlapping the trim area are preserved.</li>
+              <li>Naming Conflicts &amp; Encryption: Flattening the hierarchy may cause name conflicts, which are resolved automatically with unique suffixes. A mapping file is generated to track original versus modified names.</li>
+              <li>Nets and Wires: Nets with instances inside the trim area are retained, while those fully outside are discarded. Ports are created for wires crossing the boundary.</li>
+              <li>Physical Data Integrity: The process preserves regular/special wires, routing blockages, tracks, sites, rows, and overlapping colors within the trim area.</li>
+              <li>Loss of Hierarchical Information: Since the trim process flattens the design, hierarchical fences, instance groups, and power domains are discarded.</li>
+            </ul>
+          </div>
+          <figure class="trim-figure" data-asset-id="trim-boundary-connectivity">
+            <picture><source media="(max-width: 700px)" srcset="/images/blog/trim/trim-boundary-connectivity-mobile.svg"><img src="/images/blog/trim/trim-boundary-connectivity.svg" alt="Before and after trimming: an inside cell and its crossing wire are retained with a new port at the trim boundary; a separate wholly outside net is omitted." width="600" height="350" loading="lazy"></picture>
+            <figcaption>Crossing wire and wholly outside net before and after trimming</figcaption>
+          </figure>
+        </section>
+
+        <section class="trim-section text-only" id="limitations" aria-labelledby="limitations-title">
+          <div class="trim-copy">
+            <h2 id="limitations-title"><span class="trim-number" aria-hidden="true">05</span><span>Limitations &amp; Considerations</span></h2>
+            <ul>
+              <li class="trim-warning-item"><strong>Non-Reversible Process: :</strong> The trimmed design cannot be restored or reintegrated into the original design.</li>
+              <li>Flattened Hierarchy: Instances within the trim area lose their original hierarchical structure.</li>
+              <li>Boundary Condition Effects: Some additional DRC violations may emerge due to the preservation of only certain net wires crossing the trim area.</li>
+              <li>Exclusion of Certain Design Features: The trimming process does not retain fences, regions, guides, instance groups, and power domains.</li>
+              <li>LEF File Requirement: The trimmed design requires the LEF technology file for correct placement and DRC verification.</li>
+              <li>Modified Naming Scheme: Encrypted or altered instance and net names require a mapping file for proper tracking.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="trim-section text-only" id="conclusion" aria-labelledby="conclusion-title">
+          <div class="trim-copy">
+            <h2 id="conclusion-title"><span class="trim-number" aria-hidden="true">06</span><span>Conclusion</span></h2>
+            <p>The trimDesign command in Innovus is an essential tool for handling large-scale VLSI designs efficiently. It allows engineers to isolate and analyze smaller sections while maintaining physical design integrity and confidentiality. By leveraging this functionality, debugging is accelerated, memory usage is reduced, and third-party IP protection is ensured, making it a valuable feature for modern semiconductor design workflows.</p>
+            <a class="trim-next-link" href="/blog.html#pd-essentials">Explore more PD Essentials <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <aside class="article-toc trim-toc" aria-label="Article navigation">
+      <h2>In This Blog</h2>
+      <nav aria-label="Sections in this article">
+        <a href="#benefits" aria-current="location"><span>1</span><span>Benefits of trimDesign</span></a>
+        <a href="#working"><span>2</span><span>Working of trimDesign</span></a>
+        <a href="#trimmed-design"><span>3</span><span>Trimmed Design</span></a>
+        <a href="#key-aspects"><span>4</span><span>Key Aspects</span></a>
+        <a href="#limitations"><span>5</span><span>Limitations &amp; Considerations</span></a>
+        <a href="#conclusion"><span>6</span><span>Conclusion</span></a>
+      </nav>
+      <div class="trim-related"><h2>Related Blogs</h2>
+        <a href="/blog/pnr/floorplanning-the-design.html">Floorplanning the Design <span aria-hidden="true">→</span></a>
+        <a href="/blog/pnr/latchup-effect.html">Latch-Up Effect <span aria-hidden="true">→</span></a>
+        <a href="/blog/pnr/module-placement-constraints.html">Module Placement Constraints <span aria-hidden="true">→</span></a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="inner-footer">
+    <div class="inner-container footer-grid">
+      <div class="footer-brand"><a class="inner-brand footer-logo" href="/" aria-label="Abhyasa Semicon Technologies home"><img src="/2opq9HRgGf7qrFLssy50GtjLNQE.svg" alt="" width="48" height="48"><span><strong>Abhyasa</strong><small>SEMICON TECHNOLOGIES</small></span></a><p>Mastering VLSI Design for a Smarter Tomorrow</p></div>
+      <div><h2>Quick Links</h2><ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/#courses">Courses</a></li><li><a href="/projects/physical-design.html">Projects</a></li><li><a href="/placements.html">Placements</a></li><li><a href="/#blogs">Blogs</a></li><li><a href="/contact.html">Contact Us</a></li></ul></div>
+      <div><h2>Contact Info</h2><ul><li><a href="tel:+919438062982">+91 9438062982</a></li><li><a href="mailto:abhyasasemitech@gmail.com">abhyasasemitech@gmail.com</a></li><li><a href="mailto:hr@abhyasa.org.in">hr@abhyasa.org.in</a></li><li><a href="https://maps.app.goo.gl/x6nM2T9mB74tkHcb8" target="_blank" rel="noopener noreferrer">2nd Floor, Akhila Arcade, Rama Talkies Road, Asilmetta Junction, Visakhapatnam – 530016, Andhra Pradesh, India.</a></li></ul></div>
+      <div><h2>Follow Us</h2><ul class="social-list"><li><a href="https://www.linkedin.com/in/abhyasasemitech24/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://www.youtube.com/@abhyasa_semitech" target="_blank" rel="noopener noreferrer">YouTube</a></li><li><a href="https://www.instagram.com/abhyasa_semitech/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://x.com/abhyasasemitech" target="_blank" rel="noopener noreferrer">X</a></li></ul></div>
+    </div><div class="inner-container footer-legal"><p>Copyright © 2025 ABHYASA SEMICON TECHNOLOGIES. All rights reserved.</p></div>
+  </footer>
+  <script src="/projects-dropdown.js" defer></script>
+  <script src="/trim-article.js" defer></script>
+</body>
+</html>

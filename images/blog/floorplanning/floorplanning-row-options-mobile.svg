@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1320" role="img" aria-labelledby="title desc">
+<defs>
+ <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F8FCFF"/><stop offset=".56" stop-color="#EDF6FF"/><stop offset="1" stop-color="#E5F3FF"/></linearGradient>
+ <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F5FAFF"/></linearGradient>
+ <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D9EEFF"/><stop offset="1" stop-color="#A6D4FF"/></linearGradient>
+ <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EEE7FF"/><stop offset="1" stop-color="#D1C1FF"/></linearGradient>
+ <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8F8FA"/><stop offset="1" stop-color="#A7E8EC"/></linearGradient>
+ <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#356DA5" flood-opacity=".12"/></filter>
+ <linearGradient id="blueFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#C8E6FF"/><stop offset="1" stop-color="#8BC5FF"/></linearGradient>
+ <linearGradient id="cyanFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#C8F4FA"/><stop offset="1" stop-color="#75D5E7"/></linearGradient>
+ <linearGradient id="mintFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D7F8E8"/><stop offset="1" stop-color="#8EE2B9"/></linearGradient>
+ <linearGradient id="amberFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFEAB8"/><stop offset="1" stop-color="#FFC86B"/></linearGradient>
+ <linearGradient id="violetFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E9DDFF"/><stop offset="1" stop-color="#B99BFF"/></linearGradient>
+ <linearGradient id="coralFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFE1DC"/><stop offset="1" stop-color="#FFAAA2"/></linearGradient></defs>
+<title id="title">Six standard-cell row configurations</title><desc id="desc">Six source-matched examples show two abutted rows in the first three cards and four individual rows in the final three cards.</desc>
+<rect width="720" height="1320" rx="18" fill="url(#canvas)"/>
+<g font-family="Arial,sans-serif" fill="#102A55">
+<g transform="translate(24 20)"><rect width="672" height="190" rx="14" fill="url(#surface)" stroke="#BEDAF2" filter="url(#shadow)"/><text x="28" y="48" font-size="25" font-weight="700">Bottom R0 and flip/abut</text><g transform="translate(310 66)" fill="url(#blueFill)" stroke="#356A9F" stroke-width="2.5"><rect width="300" height="96" rx="2"/><path d="M0 48h300"/><path d="M2 46L48 2H2zM2 50L48 94H2z" fill="none"/></g></g>
+<g transform="translate(24 232)"><rect width="672" height="190" rx="14" fill="url(#surface)" stroke="#BEDAF2" filter="url(#shadow)"/><text x="28" y="48" font-size="25" font-weight="700">Bottom MX and flip/abut</text><g transform="translate(310 66)" fill="url(#violetFill)" stroke="#6650AA" stroke-width="2.5"><rect width="300" height="96" rx="2"/><path d="M0 48h300"/><path d="M2 2L48 48H2zM2 94L48 48H2z" fill="none"/></g></g>
+<g transform="translate(24 444)"><rect width="672" height="190" rx="14" fill="url(#surface)" stroke="#BEDAF2" filter="url(#shadow)"/><text x="28" y="48" font-size="25" font-weight="700">Bottom R0 and abut</text><g transform="translate(310 66)" fill="url(#cyanFill)" stroke="#257B92" stroke-width="2.5"><rect width="300" height="96" rx="2"/><path d="M0 48h300"/><path d="M2 2L48 48H2zM2 50L48 94H2z" fill="none"/></g></g>
+<g transform="translate(24 656)"><rect width="672" height="190" rx="14" fill="url(#surface)" stroke="#BEDAF2" filter="url(#shadow)"/><text x="28" y="48" font-size="25" font-weight="700">Bottom R0 and flip</text><g transform="translate(310 66)" fill="url(#mintFill)" stroke="#247B58" stroke-width="2.5"><path d="M0 0h300v28H0zM0 36h300v28H0zM0 72h300v28H0zM0 108h300v28H0z"/><path d="M2 28L48 2H2zM2 62L48 36H2zM2 100L48 72H2zM2 134L48 108H2z" fill="none"/></g></g>
+<g transform="translate(24 868)"><rect width="672" height="190" rx="14" fill="url(#surface)" stroke="#BEDAF2" filter="url(#shadow)"/><text x="28" y="48" font-size="25" font-weight="700">Bottom MX and flip</text><g transform="translate(310 66)" fill="url(#amberFill)" stroke="#A96B13" stroke-width="2.5"><path d="M0 0h300v28H0zM0 36h300v28H0zM0 72h300v28H0zM0 108h300v28H0z"/><path d="M2 2L48 28H2zM2 62L48 36H2zM2 74L48 100H2zM2 134L48 108H2z" fill="none"/></g></g>
+<g transform="translate(24 1080)"><rect width="672" height="190" rx="14" fill="url(#surface)" stroke="#BEDAF2" filter="url(#shadow)"/><text x="28" y="48" font-size="25" font-weight="700">Bottom R0</text><g transform="translate(310 66)" fill="url(#coralFill)" stroke="#BA5548" stroke-width="2.5"><path d="M0 0h300v28H0zM0 36h300v28H0zM0 72h300v28H0zM0 108h300v28H0z"/><path d="M2 2L48 28H2zM2 38L48 64H2zM2 74L48 100H2zM2 110L48 136H2z" fill="none"/></g></g>
+</g></svg>

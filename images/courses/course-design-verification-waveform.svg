@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">RTL simulation timing waveforms</title>
+  <desc id="desc">A timing viewer with a regular clock, active-low reset, valid and ready handshake pulses, and stable data and address buses.</desc>
+  <defs>
+    <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#0c2541"/><stop offset="1" stop-color="#06172a"/></linearGradient>
+    <linearGradient id="bar" x2="1"><stop stop-color="#102d4b"/><stop offset="1" stop-color="#0b213a"/></linearGradient>
+    <clipPath id="round"><rect width="900" height="500" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="900" height="500" fill="url(#panel)"/>
+    <rect width="900" height="58" fill="url(#bar)"/>
+    <path d="M0 58H900" stroke="#244460"/>
+    <circle cx="28" cy="29" r="6" fill="#37d69a"/>
+    <text x="46" y="35" fill="#e2edf8" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="650">RTL Simulation</text>
+    <text x="855" y="34" fill="#8da9c4" font-family="Segoe UI,Arial,sans-serif" font-size="15" text-anchor="end">Timing · 120 ns</text>
+    <text x="34" y="83" fill="#88a5c2" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600">Signal</text>
+    <text x="270" y="83" fill="#88a5c2" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600">Time (ns)</text>
+    <path d="M240 68V476" stroke="#2a4966" stroke-width="1.5"/>
+    <g fill="#7795b4" font-family="Segoe UI,Arial,sans-serif" font-size="13" text-anchor="middle">
+      <text x="270" y="103">0</text><text x="367.5" y="103">20</text><text x="465" y="103">40</text><text x="562.5" y="103">60</text><text x="660" y="103">80</text><text x="757.5" y="103">100</text><text x="855" y="103">120</text>
+    </g>
+    <g stroke="#1a3651" stroke-width="1">
+      <path d="M270 108V463M367.5 108V463M465 108V463M562.5 108V463M660 108V463M757.5 108V463M855 108V463"/>
+      <path d="M24 158H876M24 212H876M24 266H876M24 320H876M24 376H876M24 446H876"/>
+    </g>
+    <g fill="#d0deec" font-family="Consolas,Menlo,monospace" font-size="17">
+      <text x="34" y="143">clk</text><text x="34" y="197">reset_n</text><text x="34" y="251">valid</text><text x="34" y="305">ready</text><text x="34" y="357">data[7:0]</text><text x="34" y="427">addr[3:0]</text>
+    </g>
+    <g fill="none" stroke-linejoin="round" stroke-linecap="square" stroke-width="3">
+      <path d="M270 150V132H318.8V150H367.5V132H416.3V150H465V132H513.8V150H562.5V132H611.3V150H660V132H708.8V150H757.5V132H806.3V150H855V132" stroke="#45d7bf"/>
+      <path d="M270 204H318.8V186H855" stroke="#f1c75b"/>
+      <path d="M270 258H367.5V240H465V258H562.5V240H660V258H855" stroke="#35d18a"/>
+      <path d="M270 312H367.5V294H660V312H855" stroke="#55b8ff"/>
+      <path d="M270 357H357.5L367.5 345H455L465 357L475 369H552.5L562.5 357H650L660 369L670 357H855M270 357H357.5L367.5 369H455L465 357L475 345H552.5L562.5 357H650L660 345L670 357H855" stroke="#f1c75b"/>
+      <path d="M270 427H357.5L367.5 415H455L465 427L475 439H552.5L562.5 427H650L660 439L670 427H855M270 427H357.5L367.5 439H455L465 427L475 415H552.5L562.5 427H650L660 415L670 427H855" stroke="#64aaff"/>
+    </g>
+    <g fill="#f6e7b0" font-family="Consolas,Menlo,monospace" font-size="15" text-anchor="middle">
+      <text x="416" y="362">2A</text><text x="611" y="362">C3</text>
+      <text x="416" y="432">1</text><text x="611" y="432">A</text>
+    </g>
+    <g fill="#567895" font-family="Segoe UI,Arial,sans-serif" font-size="12">
+      <text x="270" y="482">0</text><text x="855" y="482" text-anchor="end">120 ns</text>
+    </g>
+  </g>
+</svg>

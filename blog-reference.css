@@ -1,0 +1,43 @@
+/* Reference-led article presentation; preserves source copy and original article imagery. */
+body.__className_3a0388 .bg-gradient-to-br{background:linear-gradient(180deg,#f1f8ff 0,#fff 460px)!important}
+body.__className_3a0388 .bg-gradient-to-br>.min-h-screen{display:block!important;min-height:0!important;padding:26px 20px 56px!important}
+body.__className_3a0388 .bg-gradient-to-br>.min-h-screen>.max-w-4xl{width:min(100%,1060px)!important;max-width:1060px!important;margin:0 auto!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl>.p-6{padding:28px!important;border:1px solid #e3edf7!important;border-radius:16px!important;background:#fff!important;box-shadow:0 10px 30px #153e6810!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-6>.relative{height:auto!important;aspect-ratio:2.4/1!important;max-height:340px!important;background:#edf6ff}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-6>.relative img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl h1{max-width:none!important;margin:0!important;color:#102a55!important;text-align:left!important;font-size:clamp(30px,4vw,42px)!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-4{max-width:780px;margin-inline:auto}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-4>p:first-of-type{font-size:16px;line-height:1.55;color:#435d7c!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .prose{max-width:780px!important;color:#344b68!important;font-size:15px;line-height:1.75}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .prose h2,body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .prose h3{margin-top:28px;color:#102a55!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .prose table{display:table;width:100%;}
+@media(max-width:600px){body.__className_3a0388 .bg-gradient-to-br>.min-h-screen{padding:18px 12px 36px!important}body.__className_3a0388 .bg-gradient-to-br .max-w-4xl>.p-6{padding:17px!important}body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-6>.relative{aspect-ratio:1.55/1}}
+/* Desktop article composition uses the full editorial canvas for the existing source image,
+   while keeping prose at a comfortable line length. */
+body.__className_3a0388 .bg-gradient-to-br>.min-h-screen>.max-w-4xl{width:min(calc(100% - 72px),1280px)!important;max-width:1280px!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl>.p-6{padding:clamp(24px,3.2vw,44px)!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-6>.relative{aspect-ratio:2.55/1!important;max-height:430px!important}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-4{max-width:780px!important;margin-inline:auto!important}
+body.__className_3a0388.article-nanometer .bg-gradient-to-br .max-w-4xl .space-y-4{max-width:820px!important}
+body.__className_3a0388.article-finfet .bg-gradient-to-br .max-w-4xl .space-y-6>.relative{aspect-ratio:1.95/1!important;max-height:500px!important}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table){width:100%!important;max-width:100%!important}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table)>p{max-width:780px!important;margin-inline:auto!important}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table)>table{width:100%!important;table-layout:auto}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table) td,body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table) th{padding:11px 14px!important;vertical-align:top}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table) td:nth-child(1),body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table) td:nth-child(2){font-family:ui-monospace,Consolas,monospace;font-size:13px;overflow-wrap:anywhere}
+body.__className_3a0388.article-industry .bg-gradient-to-br .max-w-4xl .space-y-4{max-width:860px!important}
+@media(max-width:760px){body.__className_3a0388 .bg-gradient-to-br>.min-h-screen>.max-w-4xl{width:calc(100% - 32px)!important}body.__className_3a0388 .bg-gradient-to-br .max-w-4xl>.p-6{padding:20px!important}body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-6>.relative{aspect-ratio:1.65/1!important;max-height:none!important}}
+@media(max-width:600px){body.__className_3a0388 .bg-gradient-to-br>.min-h-screen{padding:16px 0 34px!important}body.__className_3a0388 .bg-gradient-to-br>.min-h-screen>.max-w-4xl{width:calc(100% - 24px)!important}body.__className_3a0388 .bg-gradient-to-br .max-w-4xl>.p-6{padding:14px!important}body.__className_3a0388 .bg-gradient-to-br .max-w-4xl .space-y-6>.relative{aspect-ratio:1.4/1!important}body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table){overflow-x:auto}body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4:has(table)>table{min-width:680px}}
+/* Technical command article: let the table use the article canvas, with prose kept readable. */
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4{width:100%!important;max-width:none!important;margin:0!important}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4>p{max-width:780px!important;margin-inline:auto!important}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4 table{display:table!important;width:100%!important;max-width:100%!important;table-layout:auto}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4 td,body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4 th{padding:11px 14px!important;vertical-align:top}
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4 td:nth-child(1),body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4 td:nth-child(2){font-family:ui-monospace,Consolas,monospace;font-size:13px;overflow-wrap:anywhere}
+@media(max-width:600px){body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4{overflow-x:auto}body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl .space-y-4 table{min-width:680px}}
+
+/* The exported command table sits inside a generated paragraph wrapper. Widen that wrapper on desktop while retaining horizontal scrolling on phones. */
+body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl p:has(table){width:100%!important;max-width:none!important;margin-inline:0!important}
+@media(min-width:601px){body.__className_3a0388.article-command-map .bg-gradient-to-br .max-w-4xl p:has(table) table{width:100%!important;max-width:100%!important}}
+body.__className_3a0388 .bg-gradient-to-br .max-w-4xl p:has(table){width:100%!important;max-width:none!important;margin-inline:0!important}
+@media(min-width:601px){body.__className_3a0388 .bg-gradient-to-br .max-w-4xl p:has(table) table{width:100%!important;max-width:100%!important}}

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="520" viewBox="0 0 390 260" role="img" aria-labelledby="title desc">
+  <title id="title">FinFET Structure (3D View)</title>
+  <desc id="desc">Mobile reference-style FinFET illustration with a wide purple gate over green source and drain regions, an orange fin, and a thick beveled silicon substrate.</desc>
+  <defs>
+    <radialGradient id="panel" cx="49%" cy="46%" r="76%"><stop stop-color="#f5faff"/><stop offset=".7" stop-color="#edf7ff"/><stop offset="1" stop-color="#e6f2fc"/></radialGradient>
+    <linearGradient id="baseTop" x2=".9" y2="1"><stop stop-color="#f4f9fc"/><stop offset="1" stop-color="#c9dce9"/></linearGradient>
+    <linearGradient id="baseFront" x2="0" y2="1"><stop stop-color="#bdd2e0"/><stop offset="1" stop-color="#a8c1d1"/></linearGradient>
+    <linearGradient id="baseSide" x2="0" y2="1"><stop stop-color="#a9c1d1"/><stop offset="1" stop-color="#7897ab"/></linearGradient>
+    <linearGradient id="greenTop" x2="0" y2="1"><stop stop-color="#9ff079"/><stop offset="1" stop-color="#65cf52"/></linearGradient>
+    <linearGradient id="greenFace" x2="0" y2="1"><stop stop-color="#72dc4f"/><stop offset="1" stop-color="#40b82e"/></linearGradient>
+    <linearGradient id="greenSide" x2="0" y2="1"><stop stop-color="#4cbd38"/><stop offset="1" stop-color="#269b29"/></linearGradient>
+    <linearGradient id="gateTop" x2="0" y2="1"><stop stop-color="#9788ff"/><stop offset="1" stop-color="#7162e8"/></linearGradient>
+    <linearGradient id="gateFace" x2="0" y2="1"><stop stop-color="#6a5be0"/><stop offset="1" stop-color="#5145bf"/></linearGradient>
+    <linearGradient id="gateSide" x2="0" y2="1"><stop stop-color="#4639c2"/><stop offset="1" stop-color="#3029a0"/></linearGradient>
+    <linearGradient id="finTop" x2="0" y2="1"><stop stop-color="#ffd083"/><stop offset="1" stop-color="#ffa64f"/></linearGradient>
+    <linearGradient id="finFace" x2="0" y2="1"><stop stop-color="#ffb25f"/><stop offset="1" stop-color="#e98b42"/></linearGradient>
+    <linearGradient id="finSide" x2="0" y2="1"><stop stop-color="#e9974d"/><stop offset="1" stop-color="#d57831"/></linearGradient>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7Z" fill="#426b8b"/></marker>
+  </defs>
+  <rect width="390" height="260" rx="12" fill="url(#panel)"/>
+  <g transform="scale(.5 .59)">
+    <text x="28" y="29" fill="#102a55" font-family="Manrope,Inter,Arial,sans-serif" font-size="26" font-weight="750">FinFET Structure (3D View)</text>
+    <ellipse cx="396" cy="365" rx="205" ry="22" fill="#456f8c" opacity=".14"/>
+    <path d="m192 310 198-96 204 63-206 108Z" fill="url(#baseTop)" stroke="#a7bfce" stroke-width="3"/>
+    <path d="m192 310 196 75v53l-196-75Z" fill="url(#baseFront)" stroke="#91aabd" stroke-width="2.6"/>
+    <path d="m388 385 206-108v57L388 438Z" fill="url(#baseSide)" stroke="#829eaf" stroke-width="2.6"/>
+    <path d="m490 198 30-17 45 11-50 19Z" fill="url(#greenTop)" stroke="#50b845" stroke-width="2.4"/>
+    <path d="m490 198 25 13v63l-25-11Z" fill="url(#greenFace)" stroke="#44a938" stroke-width="2.4"/>
+    <path d="m515 211 50-19v63l-50 19Z" fill="url(#greenSide)" stroke="#339b2d" stroke-width="2.4"/>
+    <path d="m272 163 49-25 201 61-50 27Z" fill="url(#gateTop)" stroke="#6558d4" stroke-width="2.8"/>
+    <path d="m272 163 200 63v104l-200-69Z" fill="url(#gateFace)" stroke="#5147c0" stroke-width="2.8"/>
+    <path d="m472 226 50-27v104l-50 27Z" fill="url(#gateSide)" stroke="#3931a8" stroke-width="2.8"/>
+    <path d="m297 247 9 3v59l-9-3Z" fill="#b6d7f4" opacity=".92"/><path d="m351 265 9 3v60l-9-3Z" fill="#b6d7f4" opacity=".92"/>
+    <path d="m232 243 50-30 63 21-61 31Z" fill="url(#greenTop)" stroke="#50b845" stroke-width="2.4"/>
+    <path d="m232 243 52 22v68l-52-19Z" fill="url(#greenFace)" stroke="#44a938" stroke-width="2.4"/>
+    <path d="m284 265 61-31v68l-61 31Z" fill="url(#greenSide)" stroke="#339b2d" stroke-width="2.4"/>
+    <path d="m300 235 25-27 68 20-68 27Z" fill="url(#finTop)" stroke="#e18d40" stroke-width="2.2"/>
+    <path d="m300 235 25 20v65l-25-20Z" fill="url(#finFace)" stroke="#d77d32" stroke-width="2.2"/>
+    <path d="m325 255 68-27v65l-68 27Z" fill="url(#finSide)" stroke="#c96e2a" stroke-width="2.2"/>
+    <path d="m333 251 53-31 61 22-57 33Z" fill="url(#greenTop)" stroke="#50b845" stroke-width="2.4"/>
+    <path d="m333 251 57 24v82l-57-19Z" fill="url(#greenFace)" stroke="#44a938" stroke-width="2.4"/>
+    <path d="m390 275 57-33v82l-57 33Z" fill="url(#greenSide)" stroke="#369c37" stroke-width="2.4"/>
+    <g fill="none" stroke="#426b8b" stroke-width="3.4" stroke-linecap="round" marker-end="url(#arrow)">
+      <path d="M173 265H232"/><path d="M430 99h35M430 99v91" marker-end="none"/><path d="M617 210h-52"/><path d="M650 327h-87"/>
+      <circle cx="430" cy="190" r="3.2" fill="#087cff" stroke="none"/>
+    </g>
+    <g fill="#102a55" font-family="Manrope,Inter,Arial,sans-serif" font-size="26" font-weight="750">
+      <text x="57" y="269">Source</text><text x="621" y="214">Drain</text><text x="477" y="103">Gate</text><text x="655" y="331">Fin</text><text x="506" y="430">Silicon Substrate</text>
+    </g>
+  </g>
+</svg>

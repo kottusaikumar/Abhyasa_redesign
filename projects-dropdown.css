@@ -1,0 +1,14 @@
+.projects-nav-item{position:relative;display:inline-flex;align-items:center}
+.projects-nav-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 8px;border:0;border-radius:8px;background:transparent;color:inherit;font:inherit;font-size:inherit;font-weight:inherit;white-space:nowrap;cursor:pointer;transition:background-color .16s ease,color .16s ease}
+.projects-nav-toggle[aria-expanded="true"]>span{transform:rotate(180deg)}
+.projects-nav-toggle>span{display:inline-block;transition:transform .16s ease}
+.projects-nav-menu{position:absolute;top:100%;left:0;z-index:60;min-width:245px;padding:7px;border:1px solid #dce7f4;border-radius:12px;background:#fff;box-shadow:0 14px 32px rgba(20,49,82,.16)}
+.projects-nav-menu[hidden]{display:none!important}
+.projects-nav-menu a{display:flex;align-items:center;min-height:44px;padding:9px 12px;border-radius:8px;color:#172c50;text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+.projects-nav-menu a:hover,.projects-nav-menu a:focus-visible{background:#edf5fd;color:#0e4fa9}
+.projects-nav-toggle:focus-visible,.projects-nav-menu a:focus-visible{outline:3px solid #0b376b;outline-offset:3px;border-radius:7px;box-shadow:0 0 0 2px #fff}.projects-nav-toggle:active{color:#103f7e;background:#e4edf7}
+.inner-nav .projects-nav-toggle{color:#172c50;font-size:15px;font-weight:600;border-bottom:2px solid transparent}
+.inner-nav .projects-nav-toggle:hover,.inner-nav .projects-nav-toggle[aria-expanded="true"],.inner-nav .projects-nav-toggle[aria-current="page"]{color:#1456b8}.inner-nav .projects-nav-toggle:hover,.inner-nav .projects-nav-toggle[aria-expanded="true"]{background:#f1f6fc}
+@media(max-width:980px){.inner-nav .projects-nav-item{display:block;width:100%}.inner-nav .projects-nav-toggle{width:100%;justify-content:space-between;padding:11px 4px;border-bottom:1px solid #edf2f8;font-size:16px}.inner-nav .projects-nav-menu{position:static;min-width:0;margin:0;padding:4px 0 8px 12px;border:0;border-radius:0;background:#fff;box-shadow:none}.inner-nav .projects-nav-menu a{white-space:normal}.primary-nav .projects-nav-item{width:100%;display:block}.primary-nav .projects-nav-toggle{width:100%;justify-content:space-between;padding:10px 0;border-bottom:1px solid #edf2f8}.primary-nav .projects-nav-menu{position:static;min-width:0;margin:0;padding:4px 0 8px 12px;border:0;border-radius:0;background:#fff;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){.projects-nav-toggle,.projects-nav-toggle>span{transition:none}}
+

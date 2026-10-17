@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="title desc">
+<title id="title">Selected design area becomes an independent trimmed design</title><desc id="desc">A dashed trim box contains a standard cell, routing and placement blockages, and an overlapping hard macro. The independent output keeps their relative positions, including the macro crossing the boundary. Objects wholly outside the box are omitted.</desc>
+<rect width="640" height="340" rx="18" fill="#eef7ff"/>
+<text x="28" y="36" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#10345d">Original chip</text><text x="424" y="36" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#10345d">Trimmed design</text>
+<rect x="24" y="54" width="285" height="240" rx="12" fill="#f9fcff" stroke="#6c91b4" stroke-width="2"/>
+<rect x="86" y="89" width="166" height="170" rx="7" fill="#e8f8ee" stroke="#0d9b63" stroke-width="3" stroke-dasharray="9 6"/>
+<text x="91" y="78" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#087d53">Selected trim box</text>
+<rect x="115" y="117" width="43" height="34" rx="4" fill="#66c7ef" stroke="#0879bb" stroke-width="2"/><rect x="176" y="117" width="52" height="34" rx="4" fill="#af93ef" stroke="#7150ba" stroke-width="2"/>
+<rect x="115" y="181" width="70" height="34" rx="4" fill="#77d3ae" stroke="#24946a" stroke-width="2"/><rect x="238" y="180" width="37" height="61" rx="4" fill="#ffcf83" stroke="#c9871d" stroke-width="2"/>
+<rect x="42" y="119" width="23" height="34" rx="3" fill="#f3a9aa" stroke="#c75c65" stroke-width="2"/><rect x="281" y="174" width="20" height="36" rx="3" fill="#f3a9aa" stroke="#c75c65" stroke-width="2"/>
+
+<path d="M329 172h72" fill="none" stroke="#147ac6" stroke-width="5"/><path d="m389 161 14 11-14 11" fill="none" stroke="#147ac6" stroke-width="5"/>
+<rect x="425" y="89" width="166" height="170" rx="7" fill="#e8f8ee" stroke="#0d9b63" stroke-width="3" stroke-dasharray="9 6"/>
+<rect x="454" y="117" width="43" height="34" rx="4" fill="#66c7ef" stroke="#0879bb" stroke-width="2"/><rect x="515" y="117" width="52" height="34" rx="4" fill="#af93ef" stroke="#7150ba" stroke-width="2"/>
+<rect x="454" y="181" width="70" height="34" rx="4" fill="#77d3ae" stroke="#24946a" stroke-width="2"/><rect x="577" y="180" width="37" height="61" rx="4" fill="#ffcf83" stroke="#c9871d" stroke-width="2"/>
+<text x="430" y="285" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#17634d">Overlapping macro kept</text><g font-family="Arial,sans-serif" font-size="14" fill="#294968"><rect x="24" y="308" width="13" height="13" fill="#66c7ef"/><text x="43" y="320">Cell</text><rect x="107" y="308" width="13" height="13" fill="#af93ef"/><text x="126" y="320">Route blk</text><rect x="228" y="308" width="13" height="13" fill="#77d3ae"/><text x="247" y="320">Place blk</text><rect x="359" y="308" width="13" height="13" fill="#ffcf83"/><text x="378" y="320">Hard macro</text><rect x="507" y="308" width="13" height="13" fill="#f3a9aa"/><text x="526" y="320">Outside</text></g>
+</svg>

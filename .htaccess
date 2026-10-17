@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Prefer a matching static HTML page before a same-named directory
+    # (for example /courses and /blog both also have asset directories).
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.+?)/?$ $1.html [L]
+
+    # Serve real files and directories after checking static page routes.
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Unknown routes should be genuine 404s, not silently serve the homepage.
+    ErrorDocument 404 /404.html
+</IfModule>
+
+# Compress text responses when the hosting server supports mod_deflate.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# Revalidate documents, while caching unversioned assets for a bounded period.
+<IfModule mod_headers.c>
+    <FilesMatch "\.(?:html?)$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+    <FilesMatch "\.(?:css|js)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+    <FilesMatch "\.(?:avif|gif|ico|jpe?g|png|svg|webp|woff2?)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>
