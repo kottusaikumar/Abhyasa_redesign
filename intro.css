@@ -19,11 +19,13 @@ html.intro-eligible .site-intro {
   height: 100%;
   object-fit: contain;
   background: #fbfef8;
+  /* The logo sits below the center of the source frame. Center its visible mark. */
+  transform: translateY(max(-13.4vh, -7.54vw));
 }
 
 @media (max-width: 600px) and (orientation: portrait) {
   .site-intro__video {
-    transform: scale(1.18);
+    transform: translateY(max(-15.8vh, -8.9vw)) scale(1.18);
   }
 }
 
