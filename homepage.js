@@ -30,21 +30,5 @@
     });
   }
 
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if ('IntersectionObserver' in window && !reducedMotion) {
-    const revealTargets = document.querySelectorAll('.course-card, .journey-step, .blog-card, .contact-item, .enroll-card, .contact-card');
-    document.documentElement.classList.add('reveal-ready');
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      }
-    }, { rootMargin: '0px 0px -36px 0px', threshold: 0.08 });
-    revealTargets.forEach((element) => {
-      element.classList.add('reveal');
-      observer.observe(element);
-    });
-  }
+  // Pointer hover feedback is provided by the shared motion.css stylesheet.
 })();
