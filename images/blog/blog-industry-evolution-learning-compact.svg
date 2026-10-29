@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 600" role="img" aria-labelledby="title desc">
+<title id="title">Learning practical chip-design skills for evolving applications</title>
+<desc id="desc">An RTL, verification and layout learning exercise appears above AI and cloud computing and automotive electronics application examples. The connection represents relevant transferable skills.</desc>
+<defs>
+ <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbf8f0"/><stop offset="1" stop-color="#f1f4ee"/></linearGradient>
+ <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#f7fbfc"/><stop offset="1" stop-color="#e6f0f2"/></linearGradient>
+ <linearGradient id="rtl" x2="0" y2="1"><stop stop-color="#e6f4ff"/><stop offset="1" stop-color="#c7e0f3"/></linearGradient>
+ <linearGradient id="sim" x2="0" y2="1"><stop stop-color="#f3ebfa"/><stop offset="1" stop-color="#ddd0ed"/></linearGradient>
+ <linearGradient id="layout" x2="0" y2="1"><stop stop-color="#e9f7f1"/><stop offset="1" stop-color="#c6e4d8"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-25%" width="140%" height="160%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#355364" flood-opacity=".12"/></filter>
+</defs>
+<rect width="930" height="600" fill="url(#paper)"/>
+<path d="M0 533c156-31 313 0 465 9 154 9 308-31 465-5v63H0z" fill="#e8efea" opacity=".58"/>
+<text x="465" y="59" text-anchor="middle" fill="#102d62" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700">PRACTICAL LEARNING</text>
+<g transform="translate(-105 -3) scale(1.02)">
+<g filter="url(#shadow)">
+ <rect x="226" y="91" width="568" height="234" rx="17" fill="#dae8ee" stroke="#577488" stroke-width="5"/>
+ <rect x="244" y="109" width="532" height="195" rx="7" fill="url(#screen)" stroke="#9bb8c4" stroke-width="2"/>
+ <path d="M266 328h497l57 23H209z" fill="#b9cdd4" stroke="#577488" stroke-width="4" stroke-linejoin="round"/>
+ <path d="M209 351h611l-20 12H229z" fill="#8faebc" stroke="#577488" stroke-width="3" stroke-linejoin="round"/>
+</g>
+<g stroke-width="3" filter="url(#shadow)"><rect x="267" y="128" width="140" height="107" rx="9" fill="url(#rtl)" stroke="#45789f"/><rect x="440" y="128" width="140" height="107" rx="9" fill="url(#sim)" stroke="#8570a8"/><rect x="613" y="128" width="140" height="107" rx="9" fill="url(#layout)" stroke="#5d9b89"/></g>
+<g font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="700" text-anchor="middle" fill="#102d62"><text x="337" y="166">RTL</text><text x="510" y="166">VERIFY</text><text x="683" y="166">LAYOUT</text></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M407 181h33m140 0h33" stroke="#527c8d" stroke-width="4"/><path d="m430 173 10 8-10 8m173-16 10 8-10 8" stroke="#527c8d" stroke-width="4"/><path d="M294 209h16v-19h17v19h18v-19h17" stroke="#45789f" stroke-width="3.5"/><path d="M463 209h22v-19h21v19h21v-19h24" stroke="#8570a8" stroke-width="3.5"/><path d="M631 190h24v23h-24zM664 190h21v12h-21zM694 190h27v23h-27z" stroke="#5d9b89" stroke-width="2.5"/></g>
+<path d="M272 279h475" stroke="#a5c2c8" stroke-width="2"/>
+<path d="M282 263h36v-18h49v18h50v-18h49v18h50v-18h49v18h50v-18h48v18h64" fill="none" stroke="#7865a6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="747" cy="263" r="5" fill="#1261d8"/>
+</g>
+
+<text x="465" y="405" text-anchor="middle" fill="#102d62" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700">EVOLVING APPLICATIONS</text>
+<g filter="url(#shadow)"><rect x="178" y="429" width="259" height="115" rx="18" fill="#eee9f8" stroke="#a08dbb" stroke-width="3"/><rect x="493" y="429" width="259" height="115" rx="18" fill="#e7f4ee" stroke="#82b29d" stroke-width="3"/></g>
+<g fill="#d1cce8" stroke="#675684" stroke-width="2.5"><rect x="218" y="442" width="61" height="83" rx="5"/><rect x="289" y="442" width="61" height="83" rx="5"/></g>
+<g stroke="#9c8eb6" stroke-width="2.5"><path d="M230 461h37m-37 21h37m-37 21h37M301 461h37m-37 21h37m-37 21h37"/></g>
+<g fill="#1261d8"><circle cx="231" cy="470" r="3"/><circle cx="302" cy="470" r="3"/></g>
+<path d="M525 500h192l-17-39c-5-11-17-18-29-18h-92c-12 0-23 8-27 18z" fill="#badfce" stroke="#477e71" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M533 501h180v23H533z" fill="#f7fbf8" stroke="#477e71" stroke-width="3.5"/>
+<path d="M577 463h95l11 31H566z" fill="#e8f5f0" stroke="#78aa98" stroke-width="2.5"/>
+<path d="M623 464v30" stroke="#78aa98" stroke-width="2"/>
+<g fill="#477e71"><circle cx="565" cy="525" r="10"/><circle cx="680" cy="525" r="10"/></g>
+<rect x="606" y="484" width="35" height="26" rx="3" fill="#8fc7af" stroke="#477e71" stroke-width="2"/>
+<path d="M615 490h17m-17 7h17m-17 7h12" stroke="#477e71" stroke-width="1.5"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#102d62"><text x="307" y="582">AI / CLOUD</text><text x="623" y="582">AUTOMOTIVE</text></g>
+</svg>

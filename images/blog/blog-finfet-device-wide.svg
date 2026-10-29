@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1740 561" role="img" aria-labelledby="title desc">
+<title id="title">FinFET gate controls a raised silicon fin from three sides</title>
+<desc id="desc">Conceptual FinFET. A raised silicon fin runs from source on the left to drain on the right. The gate crosses the fin at its center and wraps its top and both sidewalls; the channel lies in the fin beneath the gate.</desc>
+<defs>
+<linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbf8f0"/><stop offset="1" stop-color="#f1f4ee"/></linearGradient>
+<linearGradient id="base" x2="0" y2="1"><stop stop-color="#d3e5e4"/><stop offset="1" stop-color="#a9c6c8"/></linearGradient>
+<linearGradient id="fin" x2="0" y2="1"><stop stop-color="#a9d4cd"/><stop offset="1" stop-color="#78aaa5"/></linearGradient>
+<linearGradient id="gate" x2="0" y2="1"><stop stop-color="#b9a6d1"/><stop offset="1" stop-color="#81729f"/></linearGradient>
+<marker id="navyArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1 1 8 4.5 1 8" fill="none" stroke="#36536c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1740" height="561" fill="url(#paper)"/>
+<path d="M0 466c274-59 521-36 760 11 234 46 457 36 679-4 120-22 219-23 301-8v96H0z" fill="#e8efea" opacity=".65"/>
+<g fill="none" stroke="#d8dfd7" stroke-width="2" opacity=".6"><path d="M70 68h240M70 86h135M1455 473h220M1518 490h150"/><circle cx="320" cy="68" r="4"/></g>
+<g font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#102d62">
+<text x="79" y="81" font-size="27" letter-spacing="5" fill="#567386">DEVICE STRUCTURE</text>
+<text x="92" y="160" font-size="47">RAISED</text><text x="92" y="211" font-size="47">SILICON FIN</text>
+<text x="1245" y="132" font-size="46">GATE</text><text x="1245" y="183" font-size="42">TOP + TWO SIDES</text>
+</g>
+<ellipse cx="874" cy="495" rx="515" ry="23" fill="#4b6975" opacity=".12"/>
+<path d="M378 365 1300 365 1380 408 457 408Z" fill="#e3f0ec" stroke="#668790" stroke-width="4" stroke-linejoin="round"/>
+<path d="M457 408h923v70H457z" fill="url(#base)" stroke="#668790" stroke-width="4" stroke-linejoin="round"/>
+<path d="M378 365 457 408v70l-79-45z" fill="#a4c3c5" stroke="#668790" stroke-width="4" stroke-linejoin="round"/>
+<path d="M777 182h181l65 35v147H842V221z" fill="#9e8dbb" stroke="#655a82" stroke-width="5" stroke-linejoin="round"/>
+<path d="M790 196h164" stroke="#d5c8e4" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+<path d="M450 272h760l67 38H517z" fill="#cae6da" stroke="#5c8b89" stroke-width="5" stroke-linejoin="round"/>
+<path d="M517 310h760v91H517z" fill="url(#fin)" stroke="#5c8b89" stroke-width="5" stroke-linejoin="round"/>
+<path d="M450 272 517 310v91l-67-38z" fill="#70a39f" stroke="#5c8b89" stroke-width="5" stroke-linejoin="round"/>
+<path d="M520 313h254v80H520z" fill="#8fc2bb" opacity=".62"/>
+<path d="M1030 313h244v80h-244z" fill="#8fc2bb" opacity=".62"/>
+<path d="M816 297h190l29 16H844z" fill="#fff0d6" stroke="#b29b7e" stroke-width="3" stroke-linejoin="round"/>
+<path d="M844 313h191v79H844z" fill="#f9ebd3" stroke="#b29b7e" stroke-width="3" stroke-linejoin="round"/>
+<path d="M787 180h169l66 37H854z" fill="#c4b3d8" stroke="#655a82" stroke-width="5" stroke-linejoin="round"/>
+<path d="M854 217h168v181H854z" fill="url(#gate)" stroke="#655a82" stroke-width="5" stroke-linejoin="round"/>
+<path d="M787 180 854 217v181l-67-38z" fill="#8f80ae" stroke="#655a82" stroke-width="5" stroke-linejoin="round"/>
+<path d="M868 234h138" stroke="#d9cce8" stroke-width="6" stroke-linecap="round"/>
+<path d="M337 220c104 4 161 35 239 65" fill="none" stroke="#466778" stroke-width="4" stroke-linecap="round" marker-end="url(#navyArrow)"/>
+<path d="M1236 198c-75 4-143 15-216 47" fill="none" stroke="#71658c" stroke-width="4" stroke-linecap="round" marker-end="url(#navyArrow)"/>
+<g font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="700" text-anchor="middle" fill="#18395b"><text x="619" y="378">Source</text><text x="1160" y="378">Drain</text></g>
+
+</svg>

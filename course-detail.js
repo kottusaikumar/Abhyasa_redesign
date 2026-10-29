@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
+  const courseCount=document.querySelector('[data-course-count]');
+  if(courseCount)courseCount.textContent=String(document.querySelectorAll('.listing-course-grid > .course-card').length);
   document.querySelectorAll('.review-photo[data-review-initial]').forEach(photo=>{
     function showInitial(){
       const fallback=document.createElement('span');

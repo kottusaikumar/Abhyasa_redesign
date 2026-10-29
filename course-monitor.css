@@ -1,0 +1,187 @@
+/* Homepage Courses monitor shell. The Abhyasa screen and rotation stay separate. */
+.courses-section {
+  background: var(--color-surface-soft, #eff8ff);
+}
+
+.courses-section .section-heading h2 { color: var(--color-heading-brand, #102d62); }
+.courses-section .section-heading h2 span { color: var(--brand-royal-blue, #1261d8); }
+
+.courses-section .course-monitor {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 1080px);
+  margin-inline: auto;
+  container-type: inline-size;
+}
+
+/* Give the monitor more presence while keeping the same front-view proportions. */
+@media (min-width: 761px) {
+  .courses-section .course-monitor {
+    width: min(calc(100vw - clamp(20px, 132px - 10.94vw, 48px)), 1320px);
+    margin-inline: 0;
+    left: 50%;
+    translate: -50% 0;
+  }
+}
+
+.course-monitor__housing {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  /* The reference is a taller 1.45:1 screen. Keep this shell near the approved
+     Abhyasa screen ratio so the existing artwork is neither cropped nor stretched. */
+  aspect-ratio: 1.76;
+  padding: 2.05cqw 1.25cqw;
+  border: 1px solid #090a0c;
+  border-radius: 1.3cqw;
+  background: linear-gradient(180deg, #111214 0%, #08090b 47%, #050607 82%, #0c0d0f 100%);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, .18),
+    inset 1px 0 rgba(255, 255, 255, .06),
+    inset -1px 0 rgba(255, 255, 255, .04),
+    inset 0 -2px rgba(255, 255, 255, .07),
+    0 2px 3px rgba(13, 25, 39, .15),
+    0 13px 22px rgba(13, 25, 39, .13);
+}
+
+.course-monitor__housing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .035);
+  pointer-events: none;
+}
+
+.course-monitor__bezel {
+  width: 100%;
+  height: 100%;
+  padding: clamp(1px, .3cqw, 4px);
+  border: 1px solid #202124;
+  border-radius: .48cqw;
+  background: #030405;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .055),
+    inset 0 1px 2px rgba(0, 0, 0, .7);
+}
+
+.course-monitor__screen {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: .18cqw;
+  background: var(--color-surface-primary, #fff);
+  box-shadow: none;
+}
+
+.course-monitor__neck {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 46%;
+  aspect-ratio: 360 / 100;
+  height: auto;
+  margin-top: -.2cqw;
+  overflow: visible;
+  filter: drop-shadow(2px 3px 2px rgba(25, 37, 47, .16));
+}
+
+.course-monitor__base {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 40%;
+  aspect-ratio: 360 / 34;
+  height: auto;
+  margin-top: -1.2cqw;
+  overflow: visible;
+  filter: drop-shadow(0 5px 3px rgba(37, 46, 52, .2));
+}
+
+.course-monitor::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -.55cqw;
+  left: 28%;
+  width: 44%;
+  height: 1.3cqw;
+  border-radius: 50%;
+  background: rgba(50, 57, 62, .18);
+  filter: blur(7px);
+}
+
+/* Visible by default: motion is only enabled when the small observer script runs. */
+@media (prefers-reduced-motion: no-preference) {
+  .course-monitor.is-pending {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0) scale(.985);
+  }
+
+  .course-monitor.is-pending.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity 720ms ease-out, transform 720ms cubic-bezier(.2, .7, .18, 1);
+  }
+}
+
+.courses-section .course-access {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 36px;
+  margin: 25px auto 0;
+}
+
+.course-access__program {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-heading-brand, #102d62);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.course-access__program a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+.course-access__program a:first-child:hover,
+.course-access__program a:first-child:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.course-access__program a:last-child {
+  color: var(--brand-royal-blue, #1261d8);
+  font-size: 13px;
+}
+
+.course-access__program a:last-child:hover,
+.course-access__program a:last-child:focus-visible {
+  color: var(--color-action-hover, #0b51b9);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .courses-section .course-access {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 18px;
+  }
+
+  .course-access__program {
+    justify-content: space-between;
+    border-bottom: 1px solid #d7e6f4;
+    font-size: 13px;
+  }
+}

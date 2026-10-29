@@ -1,0 +1,187 @@
+/* Homepage enrollment and contact section only. */
+.home-page .contact-section {
+  padding: 58px 0 42px;
+  background: #EAF5FF;
+}
+
+.home-page .contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(0, .84fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.home-page .enroll-card {
+  padding: clamp(22px, 2.5vw, 36px);
+  border: 1px solid #bfd4ec;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(16, 45, 98, .08);
+}
+
+.home-page .contact-card {
+  padding: 6px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-page .card-heading .overline,
+.home-page .contact-card > .overline {
+  color: #1261d8;
+}
+
+.home-page .card-heading h2,
+.home-page .contact-card h2 {
+  font-size: clamp(29px, 3vw, 38px);
+}
+
+.home-page .field label {
+  position: static;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0 6px;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border: 0;
+  font: 650 12px/1.35 Inter, Arial, sans-serif;
+  color: #102d62;
+}
+
+.home-page .field input,
+.home-page .field select {
+  height: 48px;
+  border: 1px solid #a9c5e0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.home-page .field input::placeholder {
+  color: #556b89;
+}
+
+.home-page .field input:focus-visible,
+.home-page .field select:focus-visible,
+.home-page .contact-map summary:focus-visible {
+  outline: 2px solid #1261d8;
+  outline-offset: 2px;
+}
+
+.home-page .form-note {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.home-page .contact-items {
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 16px;
+}
+
+.home-page .contact-item,
+.home-page .contact-item:nth-child(2),
+.home-page .contact-item:nth-child(3) {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  column-gap: 10px;
+  grid-column: auto;
+  padding: 10px 0;
+  border-top: 1px solid #b7d1e9;
+  border-radius: 0;
+  background: transparent;
+}
+
+.home-page .contact-item .round-icon {
+  grid-row: span 4;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+}
+
+.home-page .contact-item p {
+  margin: 2px 0;
+}
+
+.home-page .contact-map {
+  margin-top: 3px;
+  border-top: 1px solid #b7d1e9;
+}
+
+.home-page .contact-map summary {
+  display: list-item;
+  min-height: 44px;
+  padding: 10px 0;
+  list-style-position: inside;
+  cursor: pointer;
+  color: #102d62;
+  font-weight: 700;
+}
+
+.home-page .contact-map[open] summary {
+  color: #1261d8;
+}
+
+.home-page .contact-map .map-frame {
+  height: 170px;
+  margin: 4px 0 10px;
+}
+
+.home-page .map-button {
+  margin-top: 6px;
+}
+
+@media (max-width: 1100px) {
+  .home-page .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page .contact-card {
+    padding: 10px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Batch 2 approved copy and CTA refinements; the form layout remains unchanged. */
+.home-page .form-required-note {
+  margin: -8px 0 14px;
+  color: #536c8a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.home-page .map-button {
+  display: inline-flex;
+  width: auto;
+  min-height: 44px;
+  padding: 8px 4px;
+  border-color: transparent;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #17477f;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.home-page .map-button:hover {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  color: #0b51b9;
+}
+.home-page .map-button:focus-visible {
+  outline: 3px solid #0e5bba;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+@media (max-width: 350px) {
+  .home-page .button-submit { padding-inline: 8px; font-size: 14px; }
+}

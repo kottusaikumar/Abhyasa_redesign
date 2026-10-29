@@ -1,4 +1,4 @@
-:root{--ip-navy:#102a55;--ip-ink:#243955;--ip-muted:#607895;--ip-blue:#0873f9;--ip-action-blue:#1456b8;--ip-action-hover:#10499e;--ip-action-outline:#6f8fb8;--ip-pale:#f1f8ff;--ip-line:#dce8f5;--ip-content:1200px;--ip-shadow:0 12px 32px rgba(31,82,137,.08)}
+:root{--ip-navy:var(--brand-navy-blue,#102d62);--ip-ink:#243955;--ip-muted:#607895;--ip-blue:var(--brand-royal-blue,#1261d8);--ip-action-blue:#1456b8;--ip-action-hover:#10499e;--ip-action-outline:#6f8fb8;--ip-pale:#f1f8ff;--ip-line:#dce8f5;--ip-content:1200px;--ip-shadow:0 12px 32px rgba(31,82,137,.08)}
 body.inner-page{margin:0;min-width:320px;background:#fff;color:var(--ip-ink);font:400 16px/1.6 Inter,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .inner-page *{box-sizing:border-box}.inner-page a{color:inherit}
 .inner-container{width:min(var(--ip-content),calc(100% - 64px));margin-inline:auto}
@@ -74,3 +74,13 @@ body.inner-page{margin:0;min-width:320px;background:#fff;color:var(--ip-ink);fon
 .inner-page .inner-nav .projects-nav-toggle:hover{border-radius:8px;background:#f1f6fc}
 
 @media(prefers-reduced-motion:reduce){.inner-page .button,.inner-page .menu-button,.inner-page .contact-submit{transition:none!important}}
+
+/* Match the homepage action language across the redesigned inner pages. */
+.inner-page .button{font-family:Manrope,Inter,Arial,sans-serif;font-weight:700;transition:background-color .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease}
+.inner-page .button-primary{border-radius:0 11px 0 11px;background:#1263d8;border-color:#1263d8;color:#fff;box-shadow:0 2px 7px rgba(16,70,145,.16)}
+.inner-page .button-primary:hover{background:#0b51b9;border-color:#0b51b9;color:#fff;box-shadow:0 4px 12px rgba(16,70,145,.2)}
+.inner-page .button-outline{border-radius:11px 0 11px 0;background:#fff;border-color:#a9c3e0;color:#17477f;box-shadow:0 1px 3px rgba(16,70,145,.06)}
+.inner-page .button-outline:hover{background:#eaf4ff;border-color:#7ea9d9;color:#103d72;box-shadow:0 3px 9px rgba(16,70,145,.1)}
+.inner-page .inner-nav .nav-cta{border-radius:0 11px 0 11px}
+.inner-page .button-primary:active{background:#08449e;border-color:#08449e;box-shadow:inset 0 1px 3px rgba(2,32,78,.2)}
+.inner-page .button-outline:active{background:#dcecff;border-color:#6d9cd3;box-shadow:inset 0 1px 2px rgba(16,70,145,.1)}

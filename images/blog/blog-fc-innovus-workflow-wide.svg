@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1740 561" role="img" aria-labelledby="title desc">
+<title id="title">Fusion Compiler and Innovus approach one design-inspection task</title>
+<desc id="desc">Two labeled tool paths, each showing opening a design and finding cells, lead toward one simplified physical-design layout. The paths indicate a shared engineering objective, not interchangeable commands.</desc>
+<defs>
+  <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbf8f0"/><stop offset="1" stop-color="#f1f4ee"/></linearGradient>
+  <linearGradient id="layout" x2="0" y2="1"><stop stop-color="#f8fcf9"/><stop offset="1" stop-color="#e5efeb"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-25%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#335363" flood-opacity=".12"/></filter>
+  <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto"><path d="M2 2 10 6 2 10" fill="none" stroke="#53788a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1740" height="561" fill="url(#paper)"/>
+<path d="M0 476c266-24 422-16 632 19 231 39 483-14 650-27 199-16 339 13 458 8v85H0z" fill="#e8efea" opacity=".55"/>
+<g fill="none" stroke="#d6dfd9" stroke-width="2" opacity=".65"><path d="M66 74h224M1450 478h215"/><circle cx="300" cy="74" r="4"/></g>
+<text x="870" y="77" text-anchor="middle" fill="#102d62" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="700" letter-spacing="1">SAME TASK · TOOL-SPECIFIC COMMANDS</text>
+
+<g filter="url(#shadow)">
+  <rect x="78" y="123" width="492" height="343" rx="29" fill="#f9f8fb" stroke="#b8accd" stroke-width="4"/>
+  <rect x="1170" y="123" width="492" height="343" rx="29" fill="#f3f9f8" stroke="#9fbfbc" stroke-width="4"/>
+  <rect x="667" y="135" width="406" height="322" rx="26" fill="url(#layout)" stroke="#6d9698" stroke-width="5"/>
+</g>
+
+<g font-family="Arial,Helvetica,sans-serif" fill="#102d62">
+  <text x="324" y="191" text-anchor="middle" font-size="42" font-weight="700">FUSION COMPILER</text>
+  <text x="1416" y="191" text-anchor="middle" font-size="42" font-weight="700">INNOVUS</text>
+  <text x="870" y="435" text-anchor="middle" font-size="37" font-weight="700">INSPECT DESIGN</text>
+</g>
+<path d="M109 216h430M1201 216h430" stroke="#d3cbdd" stroke-width="3"/>
+<path d="M1201 216h430" stroke="#c7dcd7" stroke-width="3"/>
+
+<g font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="700" fill="#18395b">
+  <rect x="118" y="243" width="412" height="76" rx="16" fill="#eee8f4" stroke="#c5b8d7" stroke-width="2"/>
+  <rect x="118" y="336" width="412" height="76" rx="16" fill="#eee8f4" stroke="#c5b8d7" stroke-width="2"/>
+  <rect x="1210" y="243" width="412" height="76" rx="16" fill="#e5f1ed" stroke="#afd0c9" stroke-width="2"/>
+  <rect x="1210" y="336" width="412" height="76" rx="16" fill="#e5f1ed" stroke="#afd0c9" stroke-width="2"/>
+  <text x="324" y="292" text-anchor="middle">Open design</text>
+  <text x="324" y="385" text-anchor="middle">Find cells</text>
+  <text x="1416" y="292" text-anchor="middle">Open design</text>
+  <text x="1416" y="385" text-anchor="middle">Find cells</text>
+</g>
+
+<g fill="none" stroke="#53788a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M575 296h60" marker-end="url(#arrow)"/>
+  <path d="M1165 296h-60" marker-end="url(#arrow)"/>
+</g>
+
+<!-- Conceptual placed-cell layout, deliberately independent of either vendor UI. -->
+<rect x="710" y="179" width="320" height="199" rx="12" fill="#fffdfa" stroke="#6e9597" stroke-width="3"/>
+<rect x="726" y="195" width="288" height="167" rx="6" fill="#e8f1ed" stroke="#a4c3bd" stroke-width="2"/>
+<g fill="#bed8d1" stroke="#7ea7a1" stroke-width="2">
+  <rect x="746" y="213" width="47" height="29" rx="3"/><rect x="801" y="213" width="47" height="29" rx="3"/><rect x="856" y="213" width="47" height="29" rx="3"/><rect x="911" y="213" width="47" height="29" rx="3"/>
+  <rect x="746" y="250" width="47" height="29" rx="3"/><rect x="801" y="250" width="47" height="29" rx="3"/><rect x="911" y="250" width="47" height="29" rx="3"/>
+  <rect x="746" y="287" width="47" height="29" rx="3"/><rect x="856" y="287" width="47" height="29" rx="3"/><rect x="911" y="287" width="47" height="29" rx="3"/>
+  <rect x="746" y="324" width="47" height="29" rx="3"/><rect x="801" y="324" width="47" height="29" rx="3"/><rect x="856" y="324" width="47" height="29" rx="3"/><rect x="911" y="324" width="47" height="29" rx="3"/>
+</g>
+<rect x="827" y="244" width="79" height="71" rx="7" fill="#f8e7cb" stroke="#b69a73" stroke-width="3"/>
+<path d="M841 260h51M841 274h38M841 288h46" stroke="#b69a73" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+<circle cx="983" cy="337" r="29" fill="#fff" stroke="#517f83" stroke-width="3"/>
+<path d="m996 350-15-15 11-11M979 333l-8-8" fill="none" stroke="#517f83" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

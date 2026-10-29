@@ -1,0 +1,174 @@
+/* One-section choreography: the existing three complete cards form the fan. */
+#journey .section-heading {
+  max-width: 860px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+#journey .section-heading h2 { max-width: none; }
+#journey .section-heading p { max-width: 750px; margin-inline: auto; color: #294563; }
+#journey .offer-heading-line { display: block; overflow: hidden; padding-bottom: .055em; }
+#journey .offer-heading-first > span,
+#journey .offer-heading-second > span { display: block; }
+#journey .offer-heading-first > span { color: #102c5b; }
+#journey .offer-heading-second > span { color: #0868f7; }
+#journey .journey-flow { isolation: isolate; }
+
+#journey[data-offer-motion="ready"] .section-heading .eyebrow,
+#journey[data-offer-motion="ready"] .section-heading p { opacity: 0; transform: translateY(-13px); }
+#journey[data-offer-motion="ready"] .offer-heading-line > span { transform: translateY(-112%); }
+#journey[data-offer-motion="rise"] .section-heading .eyebrow,
+#journey[data-offer-motion="fan"] .section-heading .eyebrow,
+#journey[data-offer-motion="settle"] .section-heading .eyebrow,
+#journey[data-offer-motion="rise"] .section-heading p,
+#journey[data-offer-motion="fan"] .section-heading p,
+#journey[data-offer-motion="settle"] .section-heading p {
+  opacity: 1; transform: none;
+  transition: opacity 570ms ease, transform 650ms cubic-bezier(.2, .8, .25, 1);
+}
+#journey[data-offer-motion="rise"] .section-heading p { transition-delay: 270ms; }
+#journey[data-offer-motion="rise"] .offer-heading-line > span,
+#journey[data-offer-motion="fan"] .offer-heading-line > span,
+#journey[data-offer-motion="settle"] .offer-heading-line > span {
+  transform: none;
+  transition: transform 660ms cubic-bezier(.16, 1, .3, 1) 110ms;
+}
+#journey[data-offer-motion="rise"] .offer-heading-second > span { transition-delay: 240ms; }
+
+/* The original cards rise from the lower edge as a deck. */
+#journey[data-offer-motion="ready"] .journey-step,
+#journey[data-offer-motion="rise"] .journey-step,
+#journey[data-offer-motion="fan"] .journey-step {
+  box-shadow: 0 25px 40px rgba(18, 43, 82, .16);
+  transform-origin: center;
+  z-index: var(--offer-layer, 1);
+}
+#journey[data-offer-motion="ready"] .step-blue,
+#journey[data-offer-motion="rise"] .step-blue,
+#journey[data-offer-motion="fan"] .step-blue { background: linear-gradient(135deg, #f0f8ff, #e0f1ff); }
+#journey[data-offer-motion="ready"] .step-amber,
+#journey[data-offer-motion="rise"] .step-amber,
+#journey[data-offer-motion="fan"] .step-amber { background: linear-gradient(135deg, #fffaf0, #fff3d9); }
+#journey[data-offer-motion="ready"] .step-green,
+#journey[data-offer-motion="rise"] .step-green,
+#journey[data-offer-motion="fan"] .step-green { background: linear-gradient(135deg, #f0fff7, #def9ea); }
+#journey[data-offer-motion="ready"] .journey-step {
+  transform: translate3d(var(--offer-deck-x, 0px), calc(var(--offer-deck-y, 0px) + 185px), 0) scale(var(--offer-deck-scale, .83)) rotate(-3deg);
+}
+#journey[data-offer-motion="rise"] .journey-step {
+  transform: translate3d(var(--offer-deck-x, 0px), var(--offer-deck-y, 0px), 0) scale(var(--offer-deck-scale, .83)) rotate(var(--offer-stack-r, 0deg));
+  transition: transform 830ms cubic-bezier(.16, 1, .3, 1);
+}
+#journey[data-offer-motion="fan"] .journey-step {
+  transform: translate3d(calc(var(--offer-deck-x, 0px) + var(--offer-fan-x, 0px)), calc(var(--offer-deck-y, 0px) + var(--offer-fan-y, 0px)), 0) scale(var(--offer-deck-scale, .83)) rotate(var(--offer-fan-r, 0deg));
+  transition: transform 980ms cubic-bezier(.16, 1, .22, 1);
+}
+#journey[data-offer-motion="fan"] .step-amber { transition-delay: 90ms; }
+#journey[data-offer-motion="fan"] .step-green { transition-delay: 180ms; }
+#journey[data-offer-motion="settle"] .journey-step,
+#journey[data-offer-motion="complete"] .journey-step {
+  transform: none;
+  box-shadow: none;
+}
+#journey[data-offer-motion="settle"] .journey-step {
+  transition: transform 1050ms cubic-bezier(.16, 1, .25, 1), box-shadow 700ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  #journey[data-offer-motion="complete"] .journey-step:hover {
+    transform: translateY(-4px) scale(1.012);
+    box-shadow: 0 18px 36px rgba(18, 58, 103, .14);
+  }
+}
+#journey[data-offer-motion="settle"] .step-amber { transition-delay: 80ms; }
+#journey[data-offer-motion="settle"] .step-green { transition-delay: 160ms; }
+
+/* The original connector draws behind the cards only as they land. */
+#journey[data-offer-motion="ready"] .journey-flow::before,
+#journey[data-offer-motion="rise"] .journey-flow::before,
+#journey[data-offer-motion="fan"] .journey-flow::before { opacity: 0; transform: scaleX(0); transform-origin: left center; }
+#journey[data-offer-motion="settle"] .journey-flow::before,
+#journey[data-offer-motion="complete"] .journey-flow::before { opacity: 1; transform: scaleX(1); }
+#journey[data-offer-motion="settle"] .journey-flow::before { transition: opacity 300ms ease, transform 960ms cubic-bezier(.2, .8, .2, 1); }
+
+@media (max-width: 980px) {
+  #journey[data-offer-motion="ready"] .journey-flow::before,
+  #journey[data-offer-motion="rise"] .journey-flow::before,
+  #journey[data-offer-motion="fan"] .journey-flow::before { transform: scaleY(0); transform-origin: center top; }
+  #journey[data-offer-motion="settle"] .journey-flow::before,
+  #journey[data-offer-motion="complete"] .journey-flow::before { transform: scaleY(1); transform-origin: center top; }
+}
+@media (max-width: 760px) {
+  #journey .section-heading { margin-bottom: 28px; }
+  #journey .section-heading h2 { font-size: clamp(34px, 8.6vw, 44px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #journey[data-offer-motion] .section-heading *,
+  #journey[data-offer-motion] .journey-step,
+  #journey[data-offer-motion] .step-copy,
+  #journey[data-offer-motion] .journey-flow::before {
+    opacity: 1 !important; transform: none !important; clip-path: none !important; transition: none !important;
+  }
+}
+
+/* Phone carousel keeps the original cards; their entrance transforms cannot run while swiping. */
+.offer-carousel-controls { display: none; }
+@media (max-width: 640px) {
+  #journey .journey-flow {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  #journey .journey-flow::-webkit-scrollbar { display: none; }
+  #journey .journey-flow::before { display: none; }
+  #journey .journey-flow > .journey-step {
+    flex: 0 0 100%;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+  #journey[data-offer-motion] .journey-flow > .journey-step {
+    transform: none !important;
+    transition: none !important;
+  }
+  .offer-carousel-controls {
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .offer-carousel-arrow {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #cbdcf1;
+    border-radius: 50%;
+    background: #fff;
+    color: #1261d8;
+    cursor: pointer;
+  }
+  .offer-carousel-arrow svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .offer-carousel-arrow:disabled { opacity: .45; cursor: default; }
+  .offer-carousel-pagination { display: flex; justify-content: center; align-items: center; }
+  .offer-carousel-dot {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .offer-carousel-dot::before { content: ""; width: 11px; height: 11px; border-radius: 50%; background: #a7bcd8; }
+  .offer-carousel-dot[aria-current="true"]::before { background: #1261d8; }
+  .offer-carousel-arrow:focus-visible,.offer-carousel-dot:focus-visible { outline: 2px solid #1261d8; outline-offset: 2px; }
+}
+@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+  #journey .journey-flow { scroll-behavior: auto; }
+}

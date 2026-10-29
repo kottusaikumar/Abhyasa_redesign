@@ -92,6 +92,17 @@
       if(menu)menu.hidden=true;
     });
   });
+  document.addEventListener('keydown',event=>{
+    if(event.key!=='Escape')return;
+    const openButtons=[...document.querySelectorAll('.projects-nav-toggle[aria-expanded="true"]')];
+    if(!openButtons.length)return;
+    openButtons.forEach(button=>{
+      button.setAttribute('aria-expanded','false');
+      const menu=document.getElementById(button.getAttribute('aria-controls'));
+      if(menu)menu.hidden=true;
+    });
+    openButtons[0].focus();
+  });
   const innerSwitch=document.querySelector('.inner-header .nav-switch');
   if(innerSwitch){
     const desktop=window.matchMedia('(min-width: 981px)');

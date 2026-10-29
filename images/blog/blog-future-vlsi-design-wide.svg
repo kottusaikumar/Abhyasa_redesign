@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1740 561" role="img" aria-labelledby="title desc">
+<title id="title">AI-assisted VLSI design-space exploration</title>
+<desc id="desc">Two alternative schematic chip floorplans lead to a larger reviewed floorplan. A separate panel evaluates power, timing, and area; a curved return arrow indicates iterative design exploration rather than a guaranteed result.</desc>
+<defs>
+ <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbf8f0"/><stop offset="1" stop-color="#f1f4ee"/></linearGradient>
+ <linearGradient id="main" x2="0" y2="1"><stop stop-color="#fafdff"/><stop offset="1" stop-color="#e8f2f3"/></linearGradient>
+ <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#d8ecf8"/><stop offset="1" stop-color="#bdd8ed"/></linearGradient>
+ <linearGradient id="teal" x2="0" y2="1"><stop stop-color="#e4f4ed"/><stop offset="1" stop-color="#b9decf"/></linearGradient>
+ <linearGradient id="violet" x2="0" y2="1"><stop stop-color="#f0eafa"/><stop offset="1" stop-color="#d9caeb"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-25%" width="145%" height="165%"><feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#2c4d5b" flood-opacity=".13"/></filter>
+ <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto"><path d="M2 2 10 6 2 10" fill="none" stroke="#588997" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1740" height="561" fill="url(#paper)"/>
+<path d="M0 488c238-36 361 10 545 12 241 3 344-37 511-29 231 10 412 29 684-4v94H0z" fill="#e9efea" opacity=".68"/>
+<path d="M1630 72h48" fill="none" stroke="#d8e2dc" stroke-width="2" opacity=".85"/>
+<g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#102d62">
+ <text x="90" y="89" font-size="43" letter-spacing="1">AI-ASSISTED DESIGN EXPLORATION</text>
+ <text x="1263" y="89" font-size="39" letter-spacing="1">PPA REVIEW</text>
+</g>
+
+<!-- Two alternative placements within one design, presented as separate schematic sheets. -->
+<g filter="url(#shadow)">
+ <rect x="89" y="166" width="210" height="246" rx="16" fill="#f9fcfc" stroke="#91abb5" stroke-width="4"/>
+ <path d="M89 399h210l-13 17H102z" fill="#c3d5d9" stroke="#91abb5" stroke-width="3" stroke-linejoin="round"/>
+ <rect x="323" y="166" width="210" height="246" rx="16" fill="#f9fcfc" stroke="#91abb5" stroke-width="4"/>
+ <path d="M323 399h210l-13 17H336z" fill="#c3d5d9" stroke="#91abb5" stroke-width="3" stroke-linejoin="round"/>
+</g>
+<g fill="#607e8d" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" letter-spacing="1"><text x="109" y="202">OPTION A</text><text x="343" y="202">OPTION B</text></g>
+<g fill="#f7fbfa" stroke="#a5bbc3" stroke-width="2.5"><rect x="109" y="222" width="170" height="169" rx="6"/><rect x="343" y="222" width="170" height="169" rx="6"/></g>
+<g stroke-width="2.5"><rect x="120" y="236" width="65" height="53" rx="4" fill="#d5e6ef" stroke="#83a9b8"/><rect x="198" y="236" width="69" height="53" rx="4" fill="#e4dcef" stroke="#9c89ba"/><rect x="120" y="304" width="85" height="71" rx="4" fill="#e1eee7" stroke="#82aa9a"/><rect x="218" y="304" width="49" height="71" rx="4" fill="#d5e6ef" stroke="#83a9b8"/>
+ <rect x="354" y="236" width="52" height="76" rx="4" fill="#e4dcef" stroke="#9c89ba"/><rect x="420" y="236" width="81" height="51" rx="4" fill="#d5e6ef" stroke="#83a9b8"/><rect x="420" y="301" width="81" height="74" rx="4" fill="#e1eee7" stroke="#82aa9a"/><rect x="354" y="326" width="52" height="49" rx="4" fill="#d5e6ef" stroke="#83a9b8"/></g>
+<g fill="none" stroke="#789ba4" stroke-width="3" stroke-linecap="round"><path d="M185 262h13m7 78h13m188-78h14m-14 72h14"/></g>
+<path d="M545 286h78" stroke="#588997" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+
+<!-- The large view is a conceptual floorplan with macros, standard-cell regions and orthogonal routes. -->
+<g filter="url(#shadow)">
+ <rect x="651" y="144" width="482" height="292" rx="20" fill="url(#main)" stroke="#5d8190" stroke-width="6"/>
+ <path d="M651 416h482l-24 25H675z" fill="#a8c5cf" stroke="#5d8190" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<text x="681" y="183" fill="#102d62" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" letter-spacing="1.6">REVIEWED FLOORPLAN</text>
+<rect x="681" y="204" width="422" height="193" rx="8" fill="#f7fbfa" stroke="#9fb9bd" stroke-width="3"/>
+<g stroke="#d7e4e2" stroke-width="2"><path d="M711 205v192m32-192v192m32-192v192m32-192v192m32-192v192m32-192v192m32-192v192m32-192v192m32-192v192m32-192v192m32-192v192M681 235h422m-422 31h422m-422 31h422m-422 31h422m-422 31h422"/></g>
+<g stroke-width="3.5" filter="url(#shadow)"><rect x="701" y="225" width="124" height="68" rx="6" fill="url(#blue)" stroke="#628eae"/><rect x="847" y="225" width="114" height="68" rx="6" fill="url(#violet)" stroke="#8e7cae"/><rect x="978" y="225" width="103" height="137" rx="6" fill="url(#teal)" stroke="#6b9e91"/><rect x="701" y="311" width="153" height="66" rx="6" fill="url(#teal)" stroke="#6b9e91"/><rect x="875" y="311" width="86" height="66" rx="6" fill="url(#blue)" stroke="#628eae"/></g>
+<g fill="none" stroke="#598e96" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M825 260h22m114 0h17M854 344h21m86 0h17M760 293v18m170 0v-18"/><path d="M826 244h15v-13h14M856 372v13h60v-8" stroke="#856fa8" stroke-width="3"/></g>
+<g fill="#fff" stroke="#5d8190" stroke-width="2"><circle cx="825" cy="260" r="5"/><circle cx="961" cy="260" r="5"/><circle cx="854" cy="344" r="5"/><circle cx="961" cy="344" r="5"/></g>
+<path d="M1137 287h75" stroke="#588997" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+
+<!-- Bars indicate competing review dimensions; their positions carry no performance claims. -->
+<g filter="url(#shadow)"><rect x="1240" y="139" width="413" height="290" rx="22" fill="#fdfefe" stroke="#90abb6" stroke-width="4"/></g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#102d62" font-weight="700"><text x="1274" y="186" font-size="24" letter-spacing="2">DESIGN CONSTRAINTS</text><text x="1274" y="235" font-size="28">POWER</text><text x="1274" y="302" font-size="28">TIMING</text><text x="1274" y="369" font-size="28">AREA</text></g>
+<g fill="#ebf0f2" stroke="#cadbdf" stroke-width="2"><rect x="1410" y="208" width="204" height="28" rx="14"/><rect x="1410" y="275" width="204" height="28" rx="14"/><rect x="1410" y="342" width="204" height="28" rx="14"/></g>
+<g><rect x="1410" y="208" width="112" height="28" rx="14" fill="#b4dacd"/><rect x="1410" y="275" width="146" height="28" rx="14" fill="#c6d8ec"/><rect x="1410" y="342" width="94" height="28" rx="14" fill="#ddd1eb"/></g>
+<g fill="#fff" stroke="#537b89" stroke-width="3"><circle cx="1522" cy="222" r="10"/><circle cx="1556" cy="289" r="10"/><circle cx="1504" cy="356" r="10"/></g>
+<path d="M1459 446c-180 71-436 65-670 45-112-9-162-24-209-37" fill="none" stroke="#74a69e" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="966" y="537" fill="#527889" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" letter-spacing="3">ITERATE · EVALUATE · REFINE</text>
+</svg>

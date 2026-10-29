@@ -1,6 +1,7 @@
 # Local backups, previous site exports, and generated audit material
 *.zip
 *.txt
+!/robots.txt
 *.legacy-export.*
 /v1/
 /_next/

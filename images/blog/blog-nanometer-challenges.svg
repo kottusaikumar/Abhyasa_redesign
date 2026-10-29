@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1740 561" role="img" aria-labelledby="title desc">
+  <title id="title">Nanometer design challenges: leakage and process variation</title>
+  <desc id="desc">Conceptual cross-section of an off-state MOS transistor. An amber dotted arrow shows leakage between source and drain; a lavender dashed outline shows a possible manufacturing variation at the gate edge.</desc>
+  <defs>
+    <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbf8f0"/><stop offset="1" stop-color="#f2f4ef"/></linearGradient>
+    <linearGradient id="silicon" x2="0" y2="1"><stop stop-color="#d5e6e5"/><stop offset="1" stop-color="#a9c6c8"/></linearGradient>
+    <linearGradient id="gate" x2="0" y2="1"><stop stop-color="#e5a48e"/><stop offset="1" stop-color="#c97563"/></linearGradient>
+    <linearGradient id="doped" x2="0" y2="1"><stop stop-color="#a9d1d3"/><stop offset="1" stop-color="#78acb0"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
+    <marker id="arrowAmber" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1 1 8 4.5 1 8" fill="none" stroke="#bd713b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="arrowNavy" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1 1 8 4.5 1 8" fill="none" stroke="#36536c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <path fill="url(#paper)" d="M0 0h1740v561H0z"/>
+  <path d="M0 460c260-60 494-43 694-8 211 37 450 67 716 18 137-25 248-22 330-5v96H0z" fill="#e9efea" opacity=".55"/>
+  <g fill="none" stroke="#d9dfd7" stroke-width="2" opacity=".55">
+    <path d="M65 69h246M65 88h137M1450 470h208M1512 488h146"/>
+    <circle cx="321" cy="69" r="4"/><circle cx="1440" cy="470" r="4"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#102d62">
+    <text x="76" y="81" font-size="27" font-weight="700" letter-spacing="5" fill="#567386">DEVICE PHYSICS</text>
+    <text x="86" y="168" font-size="47" font-weight="700">OFF-STATE</text>
+    <text x="86" y="220" font-size="47" font-weight="700">LEAKAGE</text>
+    <text x="1249" y="109" font-size="42" font-weight="700">PROCESS</text>
+    <text x="1249" y="158" font-size="42" font-weight="700">VARIATION</text>
+  </g>
+
+
+  <ellipse cx="882" cy="501" rx="515" ry="23" fill="#58747b" opacity=".13" filter="url(#shadow)"/>
+  <g stroke-linejoin="round">
+    <rect x="366" y="299" width="1032" height="177" rx="18" fill="url(#silicon)" stroke="#587983" stroke-width="4"/>
+    <path d="M386 312h401v72c-88-10-157-3-401 3z" fill="url(#doped)" stroke="#5c8d95" stroke-width="3"/>
+    <path d="M977 312h401v75c-199-6-305-13-401-3z" fill="url(#doped)" stroke="#5c8d95" stroke-width="3"/>
+    <path d="M800 308c51 8 112 8 163 0" fill="none" stroke="#688a8f" stroke-width="4" stroke-dasharray="8 10"/>
+    <rect x="769" y="278" width="228" height="25" rx="5" fill="#fff6df" stroke="#b18f67" stroke-width="4"/>
+    <path d="M786 146h194v132H786z" fill="url(#gate)" stroke="#805c5b" stroke-width="5"/>
+    <path d="M798 160h171" stroke="#f4c6b0" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+    <path d="M1005 150v124" fill="none" stroke="#8e82a8" stroke-width="5" stroke-dasharray="12 11" stroke-linecap="round"/>
+    <path d="M990 185h28" stroke="#8e82a8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke="#bd713b" stroke-width="9" stroke-linecap="round" stroke-dasharray="4 21">
+    <path d="M784 350h187"/>
+  </g>
+  <path d="M922 350h50" fill="none" stroke="#bd713b" stroke-width="8" stroke-linecap="round" marker-end="url(#arrowAmber)"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" fill="#18395b">
+    <text x="880" y="96" font-size="45" font-weight="700">Gate</text>
+    <text x="577" y="438" font-size="48" font-weight="700">Source</text>
+    <text x="1181" y="438" font-size="48" font-weight="700">Drain</text>
+  </g>
+  <path d="M882 104v28" stroke="#36536c" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowNavy)"/>
+  <path d="M340 230c93 2 112 70 188 87 82 19 169 30 246 30" fill="none" stroke="#bd713b" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowAmber)"/>\n  <path d="M1239 169c-73 0-134-7-220-8" fill="none" stroke="#70698c" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowNavy)"/>
+
+</svg>

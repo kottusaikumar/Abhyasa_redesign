@@ -8,7 +8,7 @@
   const fields = [
     { input: form.elements.namedItem("name"), error: document.getElementById("contact-name-error"), message: "Name must be at least 2 characters." },
     { input: form.elements.namedItem("email"), error: document.getElementById("contact-email-error"), message: "Enter a valid email address." },
-    { input: form.elements.namedItem("phone"), error: document.getElementById("contact-phone-error"), message: "Phone number must be at least 10 characters." },
+    { input: form.elements.namedItem("phone"), error: document.getElementById("contact-phone-error"), message: "Enter a valid phone number with 10 to 15 digits." },
     { input: form.elements.namedItem("institute"), error: document.getElementById("contact-institute-error"), message: "Institute name must be at least 2 characters." }
   ];
   let isSubmitting = false;
@@ -17,6 +17,10 @@
     const value = field.input.value.trim();
     if (!value) return "This field is required.";
     if (field.input.type === "email" && !field.input.validity.valid) return "Enter a valid email address.";
+    if (field.input.type === "tel") {
+      const digits = value.replace(/\D/g, "");
+      if (!/^[+\d\s().-]+$/.test(value) || digits.length < 10 || digits.length > 15) return field.message;
+    }
     const minimum = field.input.minLength;
     if (minimum > 0 && value.length < minimum) return field.message;
     return "";

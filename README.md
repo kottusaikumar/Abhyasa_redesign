@@ -6,11 +6,13 @@ Static HTML, CSS, JavaScript, and image assets for the Abhyasa VLSI website rede
 
 ## Preview locally
 
-Serve this directory with a static web server and open the root URL. For example:
+Run the dependency-free local preview server and open the URL it prints:
 
 ```sh
-npx serve .
+node scripts/preview-local.cjs
 ```
+
+To choose a port, pass it as an argument, for example `node scripts/preview-local.cjs 4188`.
 
 ## Deploy
 

@@ -17,7 +17,7 @@
       if (event.target.closest('a')) closeNav();
     });
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+      if (event.key === 'Escape' && !event.defaultPrevented && nav.classList.contains('is-open')) {
         closeNav();
         toggle.focus();
       }
